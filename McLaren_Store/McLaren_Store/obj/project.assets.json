@@ -1,0 +1,2745 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "ControlzEx/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+        },
+        "frameworkAssemblies": [
+          "System.Web",
+          "System.Web.Extensions"
+        ],
+        "compile": {
+          "lib/net462/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "DialogBoxForMaterialDesignToolkitInXaml/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignThemes": "2.3.1.953"
+        },
+        "compile": {
+          "lib/net45/ExtraTools.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ExtraTools.dll": {}
+        }
+      },
+      "Dynamitey/2.0.10.189": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net40/Dynamitey.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Dynamitey.dll": {}
+        }
+      },
+      "EntityFramework/6.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "related": ".SqlServer.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "related": ".SqlServer.xml;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
+        }
+      },
+      "EntityFramework.ru/6.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "[6.2.0]"
+        },
+        "resource": {
+          "lib/net45/ru/EntityFramework.SqlServer.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/ru/EntityFramework.resources.dll": {
+            "locale": "ru"
+          }
+        }
+      },
+      "ExtendedWPFConverters/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "4.7.0"
+        },
+        "compile": {
+          "lib/net471/ExtendedWPFConverters.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/ExtendedWPFConverters.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ExtendedWPFVisualTreeHelper/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net451/ExtendedWPFVisualTreeHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net451/ExtendedWPFVisualTreeHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MahApps.Metro/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "MaterialDesignColors/3.1.1-ci794": {
+        "type": "package",
+        "compile": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignExtensions/4.0.0-a02": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.0.1",
+          "MaterialDesignThemes": "4.1.0"
+        },
+        "compile": {
+          "lib/net452/MaterialDesignExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net452/Ru/MaterialDesignExtensions.resources.dll": {
+            "locale": "Ru"
+          },
+          "lib/net452/ar-DZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "ar-DZ"
+          },
+          "lib/net452/cs-CZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "lib/net452/cs/MaterialDesignExtensions.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net452/de/MaterialDesignExtensions.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net452/fr-FR/MaterialDesignExtensions.resources.dll": {
+            "locale": "fr-FR"
+          },
+          "lib/net452/fr/MaterialDesignExtensions.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/ja-JP/MaterialDesignExtensions.resources.dll": {
+            "locale": "ja-JP"
+          },
+          "lib/net452/ja/MaterialDesignExtensions.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/pt-BR/MaterialDesignExtensions.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net452/pt/MaterialDesignExtensions.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net452/ru-ru/MaterialDesignExtensions.resources.dll": {
+            "locale": "ru-ru"
+          },
+          "lib/net452/uz-Latn-UZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "uz-Latn-UZ"
+          }
+        }
+      },
+      "MaterialDesignInXamlToolkitAddOns/0.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Dynamitey": "2.0.10.189",
+          "ExtendedWPFConverters": "2.0.3",
+          "ExtendedWPFVisualTreeHelper": "2.0.2",
+          "MaterialDesignThemes": "4.5.0"
+        },
+        "compile": {
+          "lib/net471/MaterialDesignThemes.Wpf.AddOns.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/MaterialDesignThemes.Wpf.AddOns.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MaterialDesignThemes/5.1.1-ci794": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "3.1.1-ci794",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "MaterialDesignThemes.MahApps/3.1.1-ci794": {
+        "type": "package",
+        "dependencies": {
+          "MahApps.Metro": "2.0.0",
+          "MaterialDesignColors": "3.1.1-ci794",
+          "MaterialDesignThemes": "5.1.1-ci794"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.MahApps.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.MahApps.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignThemes.Wpf/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "1.0.1",
+          "Microsoft.CSharp": "4.6.0",
+          "System.Data.DataSetExtensions": "4.6.0-preview3.19128.7"
+        },
+        "compile": {
+          "lib/net45/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MaterialDesignThemes.Wpf.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.6.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Core",
+          "System.XML",
+          "System.Xaml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/27.1.56": {
+        "type": "package",
+        "compile": {
+          "lib/net462/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Shared.Base/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Shared.Base.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Shared.Base.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Shared.WPF/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Shared.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Shared.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Tools.WPF/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56",
+          "Syncfusion.Shared.WPF": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Tools.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Tools.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Data.DataSetExtensions/4.6.0-preview3.19128.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data.DataSetExtensions"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Drawing.Common/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Drawing.Common.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win": {
+      "ControlzEx/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+        },
+        "frameworkAssemblies": [
+          "System.Web",
+          "System.Web.Extensions"
+        ],
+        "compile": {
+          "lib/net462/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "DialogBoxForMaterialDesignToolkitInXaml/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignThemes": "2.3.1.953"
+        },
+        "compile": {
+          "lib/net45/ExtraTools.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ExtraTools.dll": {}
+        }
+      },
+      "Dynamitey/2.0.10.189": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net40/Dynamitey.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Dynamitey.dll": {}
+        }
+      },
+      "EntityFramework/6.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "related": ".SqlServer.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "related": ".SqlServer.xml;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
+        }
+      },
+      "EntityFramework.ru/6.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "[6.2.0]"
+        },
+        "resource": {
+          "lib/net45/ru/EntityFramework.SqlServer.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/ru/EntityFramework.resources.dll": {
+            "locale": "ru"
+          }
+        }
+      },
+      "ExtendedWPFConverters/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "4.7.0"
+        },
+        "compile": {
+          "lib/net471/ExtendedWPFConverters.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/ExtendedWPFConverters.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ExtendedWPFVisualTreeHelper/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net451/ExtendedWPFVisualTreeHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net451/ExtendedWPFVisualTreeHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MahApps.Metro/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "MaterialDesignColors/3.1.1-ci794": {
+        "type": "package",
+        "compile": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignExtensions/4.0.0-a02": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.0.1",
+          "MaterialDesignThemes": "4.1.0"
+        },
+        "compile": {
+          "lib/net452/MaterialDesignExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net452/Ru/MaterialDesignExtensions.resources.dll": {
+            "locale": "Ru"
+          },
+          "lib/net452/ar-DZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "ar-DZ"
+          },
+          "lib/net452/cs-CZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "lib/net452/cs/MaterialDesignExtensions.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net452/de/MaterialDesignExtensions.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net452/fr-FR/MaterialDesignExtensions.resources.dll": {
+            "locale": "fr-FR"
+          },
+          "lib/net452/fr/MaterialDesignExtensions.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/ja-JP/MaterialDesignExtensions.resources.dll": {
+            "locale": "ja-JP"
+          },
+          "lib/net452/ja/MaterialDesignExtensions.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/pt-BR/MaterialDesignExtensions.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net452/pt/MaterialDesignExtensions.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net452/ru-ru/MaterialDesignExtensions.resources.dll": {
+            "locale": "ru-ru"
+          },
+          "lib/net452/uz-Latn-UZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "uz-Latn-UZ"
+          }
+        }
+      },
+      "MaterialDesignInXamlToolkitAddOns/0.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Dynamitey": "2.0.10.189",
+          "ExtendedWPFConverters": "2.0.3",
+          "ExtendedWPFVisualTreeHelper": "2.0.2",
+          "MaterialDesignThemes": "4.5.0"
+        },
+        "compile": {
+          "lib/net471/MaterialDesignThemes.Wpf.AddOns.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/MaterialDesignThemes.Wpf.AddOns.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MaterialDesignThemes/5.1.1-ci794": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "3.1.1-ci794",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "MaterialDesignThemes.MahApps/3.1.1-ci794": {
+        "type": "package",
+        "dependencies": {
+          "MahApps.Metro": "2.0.0",
+          "MaterialDesignColors": "3.1.1-ci794",
+          "MaterialDesignThemes": "5.1.1-ci794"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.MahApps.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.MahApps.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignThemes.Wpf/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "1.0.1",
+          "Microsoft.CSharp": "4.6.0",
+          "System.Data.DataSetExtensions": "4.6.0-preview3.19128.7"
+        },
+        "compile": {
+          "lib/net45/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MaterialDesignThemes.Wpf.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.6.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Core",
+          "System.XML",
+          "System.Xaml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/27.1.56": {
+        "type": "package",
+        "compile": {
+          "lib/net462/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Shared.Base/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Shared.Base.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Shared.Base.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Shared.WPF/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Shared.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Shared.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Tools.WPF/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56",
+          "Syncfusion.Shared.WPF": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Tools.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Tools.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Data.DataSetExtensions/4.6.0-preview3.19128.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data.DataSetExtensions"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Drawing.Common/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Drawing.Common.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-arm64": {
+      "ControlzEx/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+        },
+        "frameworkAssemblies": [
+          "System.Web",
+          "System.Web.Extensions"
+        ],
+        "compile": {
+          "lib/net462/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "DialogBoxForMaterialDesignToolkitInXaml/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignThemes": "2.3.1.953"
+        },
+        "compile": {
+          "lib/net45/ExtraTools.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ExtraTools.dll": {}
+        }
+      },
+      "Dynamitey/2.0.10.189": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net40/Dynamitey.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Dynamitey.dll": {}
+        }
+      },
+      "EntityFramework/6.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "related": ".SqlServer.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "related": ".SqlServer.xml;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
+        }
+      },
+      "EntityFramework.ru/6.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "[6.2.0]"
+        },
+        "resource": {
+          "lib/net45/ru/EntityFramework.SqlServer.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/ru/EntityFramework.resources.dll": {
+            "locale": "ru"
+          }
+        }
+      },
+      "ExtendedWPFConverters/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "4.7.0"
+        },
+        "compile": {
+          "lib/net471/ExtendedWPFConverters.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/ExtendedWPFConverters.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ExtendedWPFVisualTreeHelper/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net451/ExtendedWPFVisualTreeHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net451/ExtendedWPFVisualTreeHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MahApps.Metro/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "MaterialDesignColors/3.1.1-ci794": {
+        "type": "package",
+        "compile": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignExtensions/4.0.0-a02": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.0.1",
+          "MaterialDesignThemes": "4.1.0"
+        },
+        "compile": {
+          "lib/net452/MaterialDesignExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net452/Ru/MaterialDesignExtensions.resources.dll": {
+            "locale": "Ru"
+          },
+          "lib/net452/ar-DZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "ar-DZ"
+          },
+          "lib/net452/cs-CZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "lib/net452/cs/MaterialDesignExtensions.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net452/de/MaterialDesignExtensions.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net452/fr-FR/MaterialDesignExtensions.resources.dll": {
+            "locale": "fr-FR"
+          },
+          "lib/net452/fr/MaterialDesignExtensions.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/ja-JP/MaterialDesignExtensions.resources.dll": {
+            "locale": "ja-JP"
+          },
+          "lib/net452/ja/MaterialDesignExtensions.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/pt-BR/MaterialDesignExtensions.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net452/pt/MaterialDesignExtensions.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net452/ru-ru/MaterialDesignExtensions.resources.dll": {
+            "locale": "ru-ru"
+          },
+          "lib/net452/uz-Latn-UZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "uz-Latn-UZ"
+          }
+        }
+      },
+      "MaterialDesignInXamlToolkitAddOns/0.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Dynamitey": "2.0.10.189",
+          "ExtendedWPFConverters": "2.0.3",
+          "ExtendedWPFVisualTreeHelper": "2.0.2",
+          "MaterialDesignThemes": "4.5.0"
+        },
+        "compile": {
+          "lib/net471/MaterialDesignThemes.Wpf.AddOns.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/MaterialDesignThemes.Wpf.AddOns.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MaterialDesignThemes/5.1.1-ci794": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "3.1.1-ci794",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "MaterialDesignThemes.MahApps/3.1.1-ci794": {
+        "type": "package",
+        "dependencies": {
+          "MahApps.Metro": "2.0.0",
+          "MaterialDesignColors": "3.1.1-ci794",
+          "MaterialDesignThemes": "5.1.1-ci794"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.MahApps.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.MahApps.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignThemes.Wpf/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "1.0.1",
+          "Microsoft.CSharp": "4.6.0",
+          "System.Data.DataSetExtensions": "4.6.0-preview3.19128.7"
+        },
+        "compile": {
+          "lib/net45/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MaterialDesignThemes.Wpf.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.6.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Core",
+          "System.XML",
+          "System.Xaml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/27.1.56": {
+        "type": "package",
+        "compile": {
+          "lib/net462/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Shared.Base/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Shared.Base.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Shared.Base.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Shared.WPF/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Shared.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Shared.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Tools.WPF/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56",
+          "Syncfusion.Shared.WPF": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Tools.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Tools.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Data.DataSetExtensions/4.6.0-preview3.19128.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data.DataSetExtensions"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Drawing.Common/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Drawing.Common.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x64": {
+      "ControlzEx/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+        },
+        "frameworkAssemblies": [
+          "System.Web",
+          "System.Web.Extensions"
+        ],
+        "compile": {
+          "lib/net462/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "DialogBoxForMaterialDesignToolkitInXaml/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignThemes": "2.3.1.953"
+        },
+        "compile": {
+          "lib/net45/ExtraTools.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ExtraTools.dll": {}
+        }
+      },
+      "Dynamitey/2.0.10.189": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net40/Dynamitey.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Dynamitey.dll": {}
+        }
+      },
+      "EntityFramework/6.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "related": ".SqlServer.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "related": ".SqlServer.xml;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
+        }
+      },
+      "EntityFramework.ru/6.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "[6.2.0]"
+        },
+        "resource": {
+          "lib/net45/ru/EntityFramework.SqlServer.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/ru/EntityFramework.resources.dll": {
+            "locale": "ru"
+          }
+        }
+      },
+      "ExtendedWPFConverters/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "4.7.0"
+        },
+        "compile": {
+          "lib/net471/ExtendedWPFConverters.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/ExtendedWPFConverters.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ExtendedWPFVisualTreeHelper/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net451/ExtendedWPFVisualTreeHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net451/ExtendedWPFVisualTreeHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MahApps.Metro/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "MaterialDesignColors/3.1.1-ci794": {
+        "type": "package",
+        "compile": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignExtensions/4.0.0-a02": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.0.1",
+          "MaterialDesignThemes": "4.1.0"
+        },
+        "compile": {
+          "lib/net452/MaterialDesignExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net452/Ru/MaterialDesignExtensions.resources.dll": {
+            "locale": "Ru"
+          },
+          "lib/net452/ar-DZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "ar-DZ"
+          },
+          "lib/net452/cs-CZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "lib/net452/cs/MaterialDesignExtensions.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net452/de/MaterialDesignExtensions.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net452/fr-FR/MaterialDesignExtensions.resources.dll": {
+            "locale": "fr-FR"
+          },
+          "lib/net452/fr/MaterialDesignExtensions.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/ja-JP/MaterialDesignExtensions.resources.dll": {
+            "locale": "ja-JP"
+          },
+          "lib/net452/ja/MaterialDesignExtensions.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/pt-BR/MaterialDesignExtensions.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net452/pt/MaterialDesignExtensions.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net452/ru-ru/MaterialDesignExtensions.resources.dll": {
+            "locale": "ru-ru"
+          },
+          "lib/net452/uz-Latn-UZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "uz-Latn-UZ"
+          }
+        }
+      },
+      "MaterialDesignInXamlToolkitAddOns/0.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Dynamitey": "2.0.10.189",
+          "ExtendedWPFConverters": "2.0.3",
+          "ExtendedWPFVisualTreeHelper": "2.0.2",
+          "MaterialDesignThemes": "4.5.0"
+        },
+        "compile": {
+          "lib/net471/MaterialDesignThemes.Wpf.AddOns.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/MaterialDesignThemes.Wpf.AddOns.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MaterialDesignThemes/5.1.1-ci794": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "3.1.1-ci794",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "MaterialDesignThemes.MahApps/3.1.1-ci794": {
+        "type": "package",
+        "dependencies": {
+          "MahApps.Metro": "2.0.0",
+          "MaterialDesignColors": "3.1.1-ci794",
+          "MaterialDesignThemes": "5.1.1-ci794"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.MahApps.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.MahApps.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignThemes.Wpf/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "1.0.1",
+          "Microsoft.CSharp": "4.6.0",
+          "System.Data.DataSetExtensions": "4.6.0-preview3.19128.7"
+        },
+        "compile": {
+          "lib/net45/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MaterialDesignThemes.Wpf.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.6.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Core",
+          "System.XML",
+          "System.Xaml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/27.1.56": {
+        "type": "package",
+        "compile": {
+          "lib/net462/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Shared.Base/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Shared.Base.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Shared.Base.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Shared.WPF/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Shared.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Shared.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Tools.WPF/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56",
+          "Syncfusion.Shared.WPF": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Tools.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Tools.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Data.DataSetExtensions/4.6.0-preview3.19128.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data.DataSetExtensions"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Drawing.Common/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Drawing.Common.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x86": {
+      "ControlzEx/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+        },
+        "frameworkAssemblies": [
+          "System.Web",
+          "System.Web.Extensions"
+        ],
+        "compile": {
+          "lib/net462/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/ControlzEx.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "DialogBoxForMaterialDesignToolkitInXaml/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignThemes": "2.3.1.953"
+        },
+        "compile": {
+          "lib/net45/ExtraTools.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ExtraTools.dll": {}
+        }
+      },
+      "Dynamitey/2.0.10.189": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "lib/net40/Dynamitey.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Dynamitey.dll": {}
+        }
+      },
+      "EntityFramework/6.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "related": ".SqlServer.xml;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/EntityFramework.dll": {
+            "related": ".SqlServer.xml;.xml"
+          }
+        },
+        "build": {
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
+        }
+      },
+      "EntityFramework.ru/6.2.0": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "[6.2.0]"
+        },
+        "resource": {
+          "lib/net45/ru/EntityFramework.SqlServer.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net45/ru/EntityFramework.resources.dll": {
+            "locale": "ru"
+          }
+        }
+      },
+      "ExtendedWPFConverters/2.0.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "4.7.0"
+        },
+        "compile": {
+          "lib/net471/ExtendedWPFConverters.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/ExtendedWPFConverters.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ExtendedWPFVisualTreeHelper/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net451/ExtendedWPFVisualTreeHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net451/ExtendedWPFVisualTreeHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MahApps.Metro/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "ControlzEx": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations",
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net47/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net47/MahApps.Metro.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "MaterialDesignColors/3.1.1-ci794": {
+        "type": "package",
+        "compile": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignColors.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignExtensions/4.0.0-a02": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "2.0.1",
+          "MaterialDesignThemes": "4.1.0"
+        },
+        "compile": {
+          "lib/net452/MaterialDesignExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net452/MaterialDesignExtensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net452/Ru/MaterialDesignExtensions.resources.dll": {
+            "locale": "Ru"
+          },
+          "lib/net452/ar-DZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "ar-DZ"
+          },
+          "lib/net452/cs-CZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "lib/net452/cs/MaterialDesignExtensions.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net452/de/MaterialDesignExtensions.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net452/fr-FR/MaterialDesignExtensions.resources.dll": {
+            "locale": "fr-FR"
+          },
+          "lib/net452/fr/MaterialDesignExtensions.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net452/ja-JP/MaterialDesignExtensions.resources.dll": {
+            "locale": "ja-JP"
+          },
+          "lib/net452/ja/MaterialDesignExtensions.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net452/pt-BR/MaterialDesignExtensions.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net452/pt/MaterialDesignExtensions.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/net452/ru-ru/MaterialDesignExtensions.resources.dll": {
+            "locale": "ru-ru"
+          },
+          "lib/net452/uz-Latn-UZ/MaterialDesignExtensions.resources.dll": {
+            "locale": "uz-Latn-UZ"
+          }
+        }
+      },
+      "MaterialDesignInXamlToolkitAddOns/0.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Dynamitey": "2.0.10.189",
+          "ExtendedWPFConverters": "2.0.3",
+          "ExtendedWPFVisualTreeHelper": "2.0.2",
+          "MaterialDesignThemes": "4.5.0"
+        },
+        "compile": {
+          "lib/net471/MaterialDesignThemes.Wpf.AddOns.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net471/MaterialDesignThemes.Wpf.AddOns.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MaterialDesignThemes/5.1.1-ci794": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "3.1.1-ci794",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.Wpf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "build": {
+          "build/MaterialDesignThemes.targets": {}
+        }
+      },
+      "MaterialDesignThemes.MahApps/3.1.1-ci794": {
+        "type": "package",
+        "dependencies": {
+          "MahApps.Metro": "2.0.0",
+          "MaterialDesignColors": "3.1.1-ci794",
+          "MaterialDesignThemes": "5.1.1-ci794"
+        },
+        "compile": {
+          "lib/net462/MaterialDesignThemes.MahApps.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net462/MaterialDesignThemes.MahApps.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "MaterialDesignThemes.Wpf/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MaterialDesignColors": "1.0.1",
+          "Microsoft.CSharp": "4.6.0",
+          "System.Data.DataSetExtensions": "4.6.0-preview3.19128.7"
+        },
+        "compile": {
+          "lib/net45/MaterialDesignThemes.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MaterialDesignThemes.Wpf.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.6.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "PresentationCore",
+          "PresentationFramework",
+          "System",
+          "System.Core",
+          "System.XML",
+          "System.Xaml",
+          "WindowsBase"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "Syncfusion.Licensing/27.1.56": {
+        "type": "package",
+        "compile": {
+          "lib/net462/Syncfusion.Licensing.dll": {}
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Licensing.dll": {}
+        }
+      },
+      "Syncfusion.Shared.Base/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Shared.Base.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Shared.Base.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Shared.WPF/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Shared.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Shared.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Syncfusion.Tools.WPF/27.1.56": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Licensing": "27.1.56",
+          "Syncfusion.Shared.WPF": "27.1.56"
+        },
+        "compile": {
+          "lib/net462/Syncfusion.Tools.WPF.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/Syncfusion.Tools.WPF.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Data.DataSetExtensions/4.6.0-preview3.19128.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Data.DataSetExtensions"
+        ],
+        "compile": {
+          "ref/net45/_._": {}
+        },
+        "runtime": {
+          "lib/net45/_._": {}
+        }
+      },
+      "System.Drawing.Common/4.7.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "System.Drawing",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Drawing.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ControlzEx/4.3.0": {
+      "sha512": "I7PKmQNIMO9+s4s50WXOApotnyEKL9G8vvYrZY7CLe7nufXwRSv+vWPrd4BYwZDQiWHbBwnXsC8zUPgPnEWr6g==",
+      "type": "package",
+      "path": "controlzex/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "controlzex.4.3.0.nupkg.sha512",
+        "controlzex.nuspec",
+        "lib/net45/ControlzEx.dll",
+        "lib/net45/ControlzEx.pdb",
+        "lib/net45/ControlzEx.xml",
+        "lib/net462/ControlzEx.dll",
+        "lib/net462/ControlzEx.pdb",
+        "lib/net462/ControlzEx.xml",
+        "lib/netcoreapp3.0/ControlzEx.dll",
+        "lib/netcoreapp3.0/ControlzEx.pdb",
+        "lib/netcoreapp3.0/ControlzEx.xml",
+        "lib/netcoreapp3.1/ControlzEx.dll",
+        "lib/netcoreapp3.1/ControlzEx.pdb",
+        "lib/netcoreapp3.1/ControlzEx.xml",
+        "logo-mini.png"
+      ]
+    },
+    "DialogBoxForMaterialDesignToolkitInXaml/1.0.0": {
+      "sha512": "K9VIugj/E1KRuxaNcQrfCPWiADKmJGQo0zlx6hJ5hKHIMp6uzlFn7WBU/XOPzYh/F/r+JLR+9fKQwl32+zHSqw==",
+      "type": "package",
+      "path": "dialogboxformaterialdesigntoolkitinxaml/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dialogboxformaterialdesigntoolkitinxaml.1.0.0.nupkg.sha512",
+        "dialogboxformaterialdesigntoolkitinxaml.nuspec",
+        "lib/net45/ExtraTools.dll"
+      ]
+    },
+    "Dynamitey/2.0.10.189": {
+      "sha512": "sKo8BlCgQTOSFFK4RlMvC8abp0NqZrTd017fishVrkoqggNBpwa4RGq88wPjyedk5GjTWeB8/kGrbXES+Rcl7Q==",
+      "type": "package",
+      "path": "dynamitey/2.0.10.189",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dynamitey.2.0.10.189.nupkg.sha512",
+        "dynamitey.nuspec",
+        "lib/net40/Dynamitey.dll",
+        "lib/netstandard1.5/Dynamitey.dll",
+        "lib/netstandard2.0/Dynamitey.dll",
+        "lib/portable-net45+sl5+win8+wp8/Dynamitey.dll"
+      ]
+    },
+    "EntityFramework/6.5.1": {
+      "sha512": "sQRP2lWg1i3aAGWqdliAM8zrGx7LHMUk+9/MoxUjwfTZYGMXvZ2JYZTlyTm1PqDxvn3c9E3U76TWDON7Y5+CVA==",
+      "type": "package",
+      "path": "entityframework/6.5.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "build/EntityFramework.DefaultItems.props",
+        "build/EntityFramework.props",
+        "build/EntityFramework.targets",
+        "build/Microsoft.Data.Entity.Build.Tasks.dll",
+        "build/net6.0/EntityFramework.props",
+        "build/net6.0/EntityFramework.targets",
+        "buildTransitive/EntityFramework.props",
+        "buildTransitive/EntityFramework.targets",
+        "buildTransitive/net6.0/EntityFramework.props",
+        "buildTransitive/net6.0/EntityFramework.targets",
+        "content/net40/App.config.install.xdt",
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.install.xdt",
+        "content/net40/Web.config.transform",
+        "entityframework.6.5.1.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "lib/netstandard2.1/EntityFramework.SqlServer.dll",
+        "lib/netstandard2.1/EntityFramework.SqlServer.xml",
+        "lib/netstandard2.1/EntityFramework.dll",
+        "lib/netstandard2.1/EntityFramework.xml",
+        "tools/EntityFramework6.PS2.psd1",
+        "tools/EntityFramework6.PS2.psm1",
+        "tools/EntityFramework6.psd1",
+        "tools/EntityFramework6.psm1",
+        "tools/about_EntityFramework6.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/net40/any/ef6.exe",
+        "tools/net40/any/ef6.pdb",
+        "tools/net40/win-arm64/ef6.exe",
+        "tools/net40/win-arm64/ef6.pdb",
+        "tools/net40/win-x86/ef6.exe",
+        "tools/net40/win-x86/ef6.pdb",
+        "tools/net45/any/ef6.exe",
+        "tools/net45/any/ef6.pdb",
+        "tools/net45/win-arm64/ef6.exe",
+        "tools/net45/win-arm64/ef6.pdb",
+        "tools/net45/win-x86/ef6.exe",
+        "tools/net45/win-x86/ef6.pdb",
+        "tools/net6.0/any/ef6.dll",
+        "tools/net6.0/any/ef6.pdb",
+        "tools/net6.0/any/ef6.runtimeconfig.json"
+      ]
+    },
+    "EntityFramework.ru/6.2.0": {
+      "sha512": "DROBt5aaifpmnT9ALLJU98j6cdEqdaNEXFyhTWewM8ywUF+XLiu0ROQ4ZpwCfLWcGFJBNRhPf76maOIVfAauxQ==",
+      "type": "package",
+      "path": "entityframework.ru/6.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "entityframework.ru.6.2.0.nupkg.sha512",
+        "entityframework.ru.nuspec",
+        "lib/net40/ru/EntityFramework.SqlServer.resources.dll",
+        "lib/net40/ru/EntityFramework.SqlServer.xml",
+        "lib/net40/ru/EntityFramework.resources.dll",
+        "lib/net40/ru/EntityFramework.xml",
+        "lib/net45/ru/EntityFramework.SqlServer.resources.dll",
+        "lib/net45/ru/EntityFramework.SqlServer.xml",
+        "lib/net45/ru/EntityFramework.resources.dll",
+        "lib/net45/ru/EntityFramework.xml"
+      ]
+    },
+    "ExtendedWPFConverters/2.0.3": {
+      "sha512": "DePZQmPr090yaYMD7P6CsJKd/sG2pYxQ9UCB2CsNJv7f5VcQJuaxBHuxAsYQv1p3LiDUNVBPIgnx022fLS+MUw==",
+      "type": "package",
+      "path": "extendedwpfconverters/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "extendedwpfconverters.2.0.3.nupkg.sha512",
+        "extendedwpfconverters.nuspec",
+        "lib/net471/ExtendedWPFConverters.dll",
+        "lib/net471/ExtendedWPFConverters.xml",
+        "lib/net5.0-windows7.0/ExtendedWPFConverters.dll",
+        "lib/net5.0-windows7.0/ExtendedWPFConverters.xml",
+        "lib/netcoreapp3.1/ExtendedWPFConverters.dll",
+        "lib/netcoreapp3.1/ExtendedWPFConverters.xml"
+      ]
+    },
+    "ExtendedWPFVisualTreeHelper/2.0.2": {
+      "sha512": "DCYggPbsve9V5GHGLpoyOADtlBJwoV+/q/CPbDK2ZxY5PCJ2zxUellSTlZI/swff76kO7ra4SXjk23Gq36/e6g==",
+      "type": "package",
+      "path": "extendedwpfvisualtreehelper/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "extendedwpfvisualtreehelper.2.0.2.nupkg.sha512",
+        "extendedwpfvisualtreehelper.nuspec",
+        "lib/net451/ExtendedWPFVisualTreeHelper.dll",
+        "lib/net451/ExtendedWPFVisualTreeHelper.xml",
+        "lib/net5.0-windows7.0/ExtendedWPFVisualTreeHelper.dll",
+        "lib/net5.0-windows7.0/ExtendedWPFVisualTreeHelper.xml",
+        "lib/netcoreapp3.1/ExtendedWPFVisualTreeHelper.dll",
+        "lib/netcoreapp3.1/ExtendedWPFVisualTreeHelper.xml"
+      ]
+    },
+    "MahApps.Metro/2.0.0": {
+      "sha512": "btjlE3Q8iebJB+4TBJZLcJBQZshKYqfkcATj9AS8veq4a506uE71NOTE1OSoavOJ70xasBjcdc+VuN17l+kIqw==",
+      "type": "package",
+      "path": "mahapps.metro/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/MahApps.Metro.dll",
+        "lib/net452/MahApps.Metro.pdb",
+        "lib/net452/MahApps.Metro.xml",
+        "lib/net46/MahApps.Metro.dll",
+        "lib/net46/MahApps.Metro.pdb",
+        "lib/net46/MahApps.Metro.xml",
+        "lib/net47/MahApps.Metro.dll",
+        "lib/net47/MahApps.Metro.pdb",
+        "lib/net47/MahApps.Metro.xml",
+        "lib/netcoreapp3.0/MahApps.Metro.dll",
+        "lib/netcoreapp3.0/MahApps.Metro.pdb",
+        "lib/netcoreapp3.0/MahApps.Metro.xml",
+        "lib/netcoreapp3.1/MahApps.Metro.dll",
+        "lib/netcoreapp3.1/MahApps.Metro.pdb",
+        "lib/netcoreapp3.1/MahApps.Metro.xml",
+        "mahapps.metro.2.0.0.nupkg.sha512",
+        "mahapps.metro.logo.png",
+        "mahapps.metro.nuspec"
+      ]
+    },
+    "MaterialDesignColors/3.1.1-ci794": {
+      "sha512": "RLV+nJGKS6MmnehVkYZsfKgCC4uwi81WQYM6Uo26087Yjl1iZtFff7dCl0qNc9iYsa4OjnvAI2XFv9ygUaAs5A==",
+      "type": "package",
+      "path": "materialdesigncolors/3.1.1-ci794",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/README.md",
+        "images/MaterialDesignColors.Icon.png",
+        "lib/net462/MaterialDesignColors.dll",
+        "lib/net462/MaterialDesignColors.pdb",
+        "lib/net6.0/MaterialDesignColors.dll",
+        "lib/net6.0/MaterialDesignColors.pdb",
+        "lib/net8.0/MaterialDesignColors.dll",
+        "lib/net8.0/MaterialDesignColors.pdb",
+        "materialdesigncolors.3.1.1-ci794.nupkg.sha512",
+        "materialdesigncolors.nuspec"
+      ]
+    },
+    "MaterialDesignExtensions/4.0.0-a02": {
+      "sha512": "AMJ2/MPDdz/PutzvKvY6autpNFa+yy7cS9BlLZVZXQKWcLQADgGkg32VoGsYrlWYeKKy0UZgSZNeQD+URTgEnQ==",
+      "type": "package",
+      "path": "materialdesignextensions/4.0.0-a02",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "Notice.txt",
+        "Readme.md",
+        "lib/net452/MaterialDesignExtensions.dll",
+        "lib/net452/MaterialDesignExtensions.xml",
+        "lib/net452/Ru/MaterialDesignExtensions.resources.dll",
+        "lib/net452/ar-DZ/MaterialDesignExtensions.resources.dll",
+        "lib/net452/cs-CZ/MaterialDesignExtensions.resources.dll",
+        "lib/net452/cs/MaterialDesignExtensions.resources.dll",
+        "lib/net452/de/MaterialDesignExtensions.resources.dll",
+        "lib/net452/fr-FR/MaterialDesignExtensions.resources.dll",
+        "lib/net452/fr/MaterialDesignExtensions.resources.dll",
+        "lib/net452/ja-JP/MaterialDesignExtensions.resources.dll",
+        "lib/net452/ja/MaterialDesignExtensions.resources.dll",
+        "lib/net452/pt-BR/MaterialDesignExtensions.resources.dll",
+        "lib/net452/pt/MaterialDesignExtensions.resources.dll",
+        "lib/net452/ru-ru/MaterialDesignExtensions.resources.dll",
+        "lib/net452/uz-Latn-UZ/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/MaterialDesignExtensions.dll",
+        "lib/netcoreapp3.1/MaterialDesignExtensions.xml",
+        "lib/netcoreapp3.1/Ru/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/ar-DZ/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/cs-CZ/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/cs/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/de/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/fr-FR/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/fr/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/ja-JP/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/ja/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/pt-BR/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/pt/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/ru-ru/MaterialDesignExtensions.resources.dll",
+        "lib/netcoreapp3.1/uz-Latn-UZ/MaterialDesignExtensions.resources.dll",
+        "materialdesignextensions.4.0.0-a02.nupkg.sha512",
+        "materialdesignextensions.nuspec"
+      ]
+    },
+    "MaterialDesignInXamlToolkitAddOns/0.0.6": {
+      "sha512": "6Vuh0JVHHmKLo+7oXfRlChRATd5XYLRY9X88ZwSbXgeWrC9DZwKQUbd2Duz22skc6w/IeJR5edqIFc7CW3iueQ==",
+      "type": "package",
+      "path": "materialdesigninxamltoolkitaddons/0.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net471/MaterialDesignThemes.Wpf.AddOns.dll",
+        "lib/net471/MaterialDesignThemes.Wpf.AddOns.xml",
+        "lib/net6.0-windows7.0/MaterialDesignThemes.Wpf.AddOns.dll",
+        "lib/net6.0-windows7.0/MaterialDesignThemes.Wpf.AddOns.xml",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.AddOns.dll",
+        "lib/netcoreapp3.1/MaterialDesignThemes.Wpf.AddOns.xml",
+        "materialdesigninxamltoolkitaddons.0.0.6.nupkg.sha512",
+        "materialdesigninxamltoolkitaddons.nuspec"
+      ]
+    },
+    "MaterialDesignThemes/5.1.1-ci794": {
+      "sha512": "YTGcvYmTt7bMsIC9twwe9EAsRzWxpC+9IPzoodDsNt3jPF2pvwAJ/dvP1eu0WvkKkGMewO50zJ+TJwYNBSnPOw==",
+      "type": "package",
+      "path": "materialdesignthemes/5.1.1-ci794",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/MaterialDesignThemes.targets",
+        "build/Resources/Roboto/Roboto-Black.ttf",
+        "build/Resources/Roboto/Roboto-BlackItalic.ttf",
+        "build/Resources/Roboto/Roboto-Bold.ttf",
+        "build/Resources/Roboto/Roboto-BoldItalic.ttf",
+        "build/Resources/Roboto/Roboto-Italic.ttf",
+        "build/Resources/Roboto/Roboto-Light.ttf",
+        "build/Resources/Roboto/Roboto-LightItalic.ttf",
+        "build/Resources/Roboto/Roboto-Medium.ttf",
+        "build/Resources/Roboto/Roboto-MediumItalic.ttf",
+        "build/Resources/Roboto/Roboto-Regular.ttf",
+        "build/Resources/Roboto/Roboto-Thin.ttf",
+        "build/Resources/Roboto/Roboto-ThinItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Bold.ttf",
+        "build/Resources/Roboto/RobotoCondensed-BoldItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Italic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Light.ttf",
+        "build/Resources/Roboto/RobotoCondensed-LightItalic.ttf",
+        "build/Resources/Roboto/RobotoCondensed-Regular.ttf",
+        "docs/README.md",
+        "images/MaterialDesignThemes.Icon.png",
+        "lib/net462/MaterialDesignThemes.Wpf.dll",
+        "lib/net462/MaterialDesignThemes.Wpf.pdb",
+        "lib/net462/MaterialDesignThemes.Wpf.xml",
+        "lib/net6.0/MaterialDesignThemes.Wpf.dll",
+        "lib/net6.0/MaterialDesignThemes.Wpf.pdb",
+        "lib/net6.0/MaterialDesignThemes.Wpf.xml",
+        "lib/net8.0/MaterialDesignThemes.Wpf.dll",
+        "lib/net8.0/MaterialDesignThemes.Wpf.pdb",
+        "lib/net8.0/MaterialDesignThemes.Wpf.xml",
+        "materialdesignthemes.5.1.1-ci794.nupkg.sha512",
+        "materialdesignthemes.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "MaterialDesignThemes.MahApps/3.1.1-ci794": {
+      "sha512": "FxXde1Z83alDRvjrPXpflsoq/lgOsIyaKtyL3NMMd+6/LLpUiZMHfSf1kvfT28qRvXtTCD6Z3TH5GLpvMkmxYw==",
+      "type": "package",
+      "path": "materialdesignthemes.mahapps/3.1.1-ci794",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/README.md",
+        "images/MaterialDesignThemes.MahApps.Icon.png",
+        "lib/net462/MaterialDesignThemes.MahApps.dll",
+        "lib/net462/MaterialDesignThemes.MahApps.pdb",
+        "lib/net6.0/MaterialDesignThemes.MahApps.dll",
+        "lib/net6.0/MaterialDesignThemes.MahApps.pdb",
+        "lib/net8.0/MaterialDesignThemes.MahApps.dll",
+        "lib/net8.0/MaterialDesignThemes.MahApps.pdb",
+        "materialdesignthemes.mahapps.3.1.1-ci794.nupkg.sha512",
+        "materialdesignthemes.mahapps.nuspec"
+      ]
+    },
+    "MaterialDesignThemes.Wpf/1.0.1": {
+      "sha512": "goEShYguOoPYJ+oBtWWMEsZFK5CL+524m2fekyLQaMkcECu2K9mYv0yJiXARQM6qr6YdF6iDuR0Bx9BunrLFzQ==",
+      "type": "package",
+      "path": "materialdesignthemes.wpf/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MaterialDesignThemes.Wpf.dll",
+        "lib/netcoreapp3.0/MaterialDesignThemes.Wpf.dll",
+        "materialdesignthemes.wpf.1.0.1.nupkg.sha512",
+        "materialdesignthemes.wpf.nuspec"
+      ]
+    },
+    "Microsoft.CSharp/4.6.0": {
+      "sha512": "kxn3M2rnAGy5N5DgcIwcE8QTePWU/XiYcQVzn9HqTls2NKluVzVSmVWRjK7OUPWbljCXuZxHyhEz9kPRIQeXow==",
+      "type": "package",
+      "path": "microsoft.csharp/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/Microsoft.CSharp.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.xml",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/uap10.0.16299/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.csharp.4.6.0.nupkg.sha512",
+        "microsoft.csharp.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/Microsoft.CSharp.dll",
+        "ref/netcore50/Microsoft.CSharp.xml",
+        "ref/netcore50/de/Microsoft.CSharp.xml",
+        "ref/netcore50/es/Microsoft.CSharp.xml",
+        "ref/netcore50/fr/Microsoft.CSharp.xml",
+        "ref/netcore50/it/Microsoft.CSharp.xml",
+        "ref/netcore50/ja/Microsoft.CSharp.xml",
+        "ref/netcore50/ko/Microsoft.CSharp.xml",
+        "ref/netcore50/ru/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/Microsoft.CSharp.dll",
+        "ref/netstandard1.0/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
+        "ref/netstandard2.0/Microsoft.CSharp.dll",
+        "ref/netstandard2.0/Microsoft.CSharp.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/uap10.0.16299/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+      "sha512": "8PZKqw9QOcu42xk8puY4P1+EXHL9YGOR9b7qhaYx5cILHul456H073tj99vyPcCt0W0781T9RwHqkx507ZyUpQ==",
+      "type": "package",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.39",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Design/Microsoft.Xaml.Behaviors.Design.dll",
+        "lib/net45/Microsoft.Xaml.Behaviors.dll",
+        "lib/net45/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net45/Microsoft.Xaml.Behaviors.xml",
+        "lib/net5.0-windows7.0/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.dll",
+        "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.xml",
+        "lib/netcoreapp3.1/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/netcoreapp3.1/Microsoft.Xaml.Behaviors.dll",
+        "lib/netcoreapp3.1/Microsoft.Xaml.Behaviors.pdb",
+        "lib/netcoreapp3.1/Microsoft.Xaml.Behaviors.xml",
+        "microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+        "microsoft.xaml.behaviors.wpf.nuspec",
+        "tools/Install.ps1"
+      ]
+    },
+    "Syncfusion.Licensing/27.1.56": {
+      "sha512": "GgxUDy3hZ2HZdTxYy+1evQevd9X2nfTPDmQoRZ54cs3AIKuwZFj91Z5Uv4+2yyfCiUCu22HrzgsxOXWka8ZAuA==",
+      "type": "package",
+      "path": "syncfusion.licensing/27.1.56",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/MonoAndroid90/Syncfusion.Licensing.dll",
+        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
+        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
+        "lib/net40/Syncfusion.Licensing.dll",
+        "lib/net45/Syncfusion.Licensing.dll",
+        "lib/net462/Syncfusion.Licensing.dll",
+        "lib/net6.0/Syncfusion.Licensing.dll",
+        "lib/net7.0/Syncfusion.Licensing.dll",
+        "lib/net8.0/Syncfusion.Licensing.dll",
+        "lib/netstandard2.0/Syncfusion.Licensing.dll",
+        "lib/uap10.0/Syncfusion.Licensing.dll",
+        "syncfusion.licensing.27.1.56.nupkg.sha512",
+        "syncfusion.licensing.nuspec",
+        "syncfusion_logo.png"
+      ]
+    },
+    "Syncfusion.Shared.Base/27.1.56": {
+      "sha512": "yh7na6AYKFy+vwYWqBj0uUm25wkvIl3SMQA/t9aSjyT/Ys52qV7I5cTflihFKv/GN4ZYoy7sqoHvAT6iXN5cOA==",
+      "type": "package",
+      "path": "syncfusion.shared.base/27.1.56",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net40/Syncfusion.Shared.Base.dll",
+        "lib/net40/Syncfusion.Shared.Base.xml",
+        "lib/net462/Syncfusion.Shared.Base.dll",
+        "lib/net462/Syncfusion.Shared.Base.xml",
+        "lib/net6.0-windows7.0/Syncfusion.Shared.Base.dll",
+        "lib/net6.0-windows7.0/Syncfusion.Shared.Base.xml",
+        "lib/net8.0-windows7.0/Syncfusion.Shared.Base.dll",
+        "lib/net8.0-windows7.0/Syncfusion.Shared.Base.xml",
+        "syncfusion.shared.base.27.1.56.nupkg.sha512",
+        "syncfusion.shared.base.nuspec",
+        "syncfusion_logo.png",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "Syncfusion.Shared.WPF/27.1.56": {
+      "sha512": "iXEzU/x31HRaUsfxjJ1hEEKe2IGjf02659Slbhsvd1TSzdApwcHv4l00ar0SHXRXqTLuyWYlfOuH8Ssns4OuJw==",
+      "type": "package",
+      "path": "syncfusion.shared.wpf/27.1.56",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net40/Design/Syncfusion.Design.Wpf.dll",
+        "lib/net40/Design/Syncfusion.Shared.WPF.DesignTools.dll",
+        "lib/net40/Design/Syncfusion.Shared.Wpf.Expression.Design.dll",
+        "lib/net40/Design/Syncfusion.Shared.Wpf.VisualStudio.Design.dll",
+        "lib/net40/Design/Syncfusion.Shared.Wpf.dll.Design.dll",
+        "lib/net40/Syncfusion.Shared.WPF.dll",
+        "lib/net40/Syncfusion.Shared.WPF.xml",
+        "lib/net462/Design/Syncfusion.Design.Wpf.dll",
+        "lib/net462/Design/Syncfusion.Shared.WPF.DesignTools.dll",
+        "lib/net462/Design/Syncfusion.Shared.Wpf.Expression.Design.dll",
+        "lib/net462/Design/Syncfusion.Shared.Wpf.VisualStudio.Design.dll",
+        "lib/net462/Design/Syncfusion.Shared.Wpf.dll.Design.dll",
+        "lib/net462/Syncfusion.Shared.WPF.dll",
+        "lib/net462/Syncfusion.Shared.WPF.xml",
+        "lib/net6.0-windows7.0/Design/Syncfusion.Shared.WPF.DesignTools.dll",
+        "lib/net6.0-windows7.0/Syncfusion.Shared.WPF.dll",
+        "lib/net6.0-windows7.0/Syncfusion.Shared.WPF.xml",
+        "lib/net8.0-windows7.0/Design/Syncfusion.Shared.WPF.DesignTools.dll",
+        "lib/net8.0-windows7.0/Syncfusion.Shared.WPF.dll",
+        "lib/net8.0-windows7.0/Syncfusion.Shared.WPF.xml",
+        "syncfusion.shared.wpf.27.1.56.nupkg.sha512",
+        "syncfusion.shared.wpf.nuspec",
+        "syncfusion_logo.png",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "Syncfusion.Tools.WPF/27.1.56": {
+      "sha512": "THYx3u2+5MTFKMP5eN/6YUcWz5VmqPnP5b8h8EQaSkqRCLHh2idOwvLkuUwG/sC5wGQfvDzD3UyekORWPcGKww==",
+      "type": "package",
+      "path": "syncfusion.tools.wpf/27.1.56",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "lib/net40/Design/Syncfusion.Design.Wpf.dll",
+        "lib/net40/Design/Syncfusion.Tools.WPF.DesignTools.dll",
+        "lib/net40/Design/Syncfusion.Tools.Wpf.Expression.Design.dll",
+        "lib/net40/Design/Syncfusion.Tools.Wpf.VisualStudio.Design.dll",
+        "lib/net40/Design/Syncfusion.Tools.Wpf.dll.Design.dll",
+        "lib/net40/Syncfusion.Tools.WPF.dll",
+        "lib/net40/Syncfusion.Tools.WPF.xml",
+        "lib/net462/Design/Syncfusion.Design.Wpf.dll",
+        "lib/net462/Design/Syncfusion.Tools.WPF.DesignTools.dll",
+        "lib/net462/Design/Syncfusion.Tools.Wpf.Expression.Design.dll",
+        "lib/net462/Design/Syncfusion.Tools.Wpf.VisualStudio.Design.dll",
+        "lib/net462/Design/Syncfusion.Tools.Wpf.dll.Design.dll",
+        "lib/net462/Syncfusion.Tools.WPF.dll",
+        "lib/net462/Syncfusion.Tools.WPF.xml",
+        "lib/net6.0-windows7.0/Design/Syncfusion.Tools.WPF.DesignTools.dll",
+        "lib/net6.0-windows7.0/Syncfusion.Tools.WPF.dll",
+        "lib/net6.0-windows7.0/Syncfusion.Tools.WPF.xml",
+        "lib/net8.0-windows7.0/Design/Syncfusion.Tools.WPF.DesignTools.dll",
+        "lib/net8.0-windows7.0/Syncfusion.Tools.WPF.dll",
+        "lib/net8.0-windows7.0/Syncfusion.Tools.WPF.xml",
+        "syncfusion.tools.wpf.27.1.56.nupkg.sha512",
+        "syncfusion.tools.wpf.nuspec",
+        "syncfusion_logo.png",
+        "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "System.Data.DataSetExtensions/4.6.0-preview3.19128.7": {
+      "sha512": "ZFJYYi41Wf4xlFKuuRUblw8yThgzBTYeZTs7eGU7sDiu+X+BmeIdT3pstCrmLpDyflDIBuKX1VYmBCGKo14h6w==",
+      "type": "package",
+      "path": "system.data.datasetextensions/4.6.0-preview3.19128.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/_._",
+        "lib/netstandard2.0/System.Data.DataSetExtensions.dll",
+        "lib/netstandard2.0/System.Data.DataSetExtensions.xml",
+        "ref/net45/_._",
+        "ref/netstandard2.0/System.Data.DataSetExtensions.dll",
+        "system.data.datasetextensions.4.6.0-preview3.19128.7.nupkg.sha512",
+        "system.data.datasetextensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Drawing.Common/4.7.0": {
+      "sha512": "v+XbyYHaZjDfn0ENmJEV1VYLgGgCTx1gnfOBcppowbpOAriglYgGCvFCPr2EEZyBvXlpxbEsTwkOlInl107ahA==",
+      "type": "package",
+      "path": "system.drawing.common/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.dll",
+        "ref/netcoreapp3.0/System.Drawing.Common.xml",
+        "ref/netstandard2.0/System.Drawing.Common.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "system.drawing.common.4.7.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "DialogBoxForMaterialDesignToolkitInXaml >= 1.0.0",
+      "EntityFramework >= 6.5.1",
+      "EntityFramework.ru >= 6.2.0",
+      "MaterialDesignColors >= 3.1.1-ci794",
+      "MaterialDesignExtensions >= 4.0.0-a02",
+      "MaterialDesignInXamlToolkitAddOns >= 0.0.6",
+      "MaterialDesignThemes >= 5.1.1-ci794",
+      "MaterialDesignThemes.MahApps >= 3.1.1-ci794",
+      "MaterialDesignThemes.Wpf >= 1.0.1",
+      "Syncfusion.Shared.Base >= 27.1.56",
+      "Syncfusion.Shared.WPF >= 27.1.56",
+      "Syncfusion.Tools.WPF >= 27.1.56"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\090TYPE\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj",
+      "projectName": "McLaren_Store",
+      "projectPath": "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj",
+      "packagesPath": "C:\\Users\\090TYPE\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\090TYPE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "projectReferences": {}
+        }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "dependencies": {
+          "DialogBoxForMaterialDesignToolkitInXaml": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
+          "EntityFramework": {
+            "target": "Package",
+            "version": "[6.5.1, )"
+          },
+          "EntityFramework.ru": {
+            "target": "Package",
+            "version": "[6.2.0, )"
+          },
+          "MaterialDesignColors": {
+            "target": "Package",
+            "version": "[3.1.1-ci794, )"
+          },
+          "MaterialDesignExtensions": {
+            "target": "Package",
+            "version": "[4.0.0-a02, )"
+          },
+          "MaterialDesignInXamlToolkitAddOns": {
+            "target": "Package",
+            "version": "[0.0.6, )"
+          },
+          "MaterialDesignThemes": {
+            "target": "Package",
+            "version": "[5.1.1-ci794, )"
+          },
+          "MaterialDesignThemes.MahApps": {
+            "target": "Package",
+            "version": "[3.1.1-ci794, )"
+          },
+          "MaterialDesignThemes.Wpf": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
+          "Syncfusion.Shared.Base": {
+            "target": "Package",
+            "version": "[27.1.56, )"
+          },
+          "Syncfusion.Shared.WPF": {
+            "target": "Package",
+            "version": "[27.1.56, )"
+          },
+          "Syncfusion.Tools.WPF": {
+            "target": "Package",
+            "version": "[27.1.56, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-arm64": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Версия обнаруженного пакета нарушает ограничение зависимости: EntityFramework.ru 6.2.0 требуется EntityFramework (= 6.2.0), но в результате разрешения получена версия EntityFramework 6.5.1.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.7.2",
+        ".NETFramework,Version=v4.7.2/win",
+        ".NETFramework,Version=v4.7.2/win-arm64",
+        ".NETFramework,Version=v4.7.2/win-x64",
+        ".NETFramework,Version=v4.7.2/win-x86"
+      ]
+    }
+  ]
+}

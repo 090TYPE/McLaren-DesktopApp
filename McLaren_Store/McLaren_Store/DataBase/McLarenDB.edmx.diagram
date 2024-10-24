@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f1e9f8e3e2bc439e878f11c2a458bdb4" Name="Diagram1">
+        <EntityTypeShape EntityType="McLaren_StoreModel.Cars" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="McLaren_StoreModel.Customers" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="McLaren_StoreModel.Employees" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="McLaren_StoreModel.Roles" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="McLaren_StoreModel.Sales" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="McLaren_StoreModel.FK__Sales__CarID__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="McLaren_StoreModel.FK__Sales__CustomerI__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="McLaren_StoreModel.FK__Employees__RoleI__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="McLaren_StoreModel.FK__Sales__EmployeeI__5441852A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

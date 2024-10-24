@@ -1,0 +1,113 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj",
+        "projectName": "McLaren_Store",
+        "projectPath": "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj",
+        "packagesPath": "C:\\Users\\090TYPE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\090TYPE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "DialogBoxForMaterialDesignToolkitInXaml": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            },
+            "EntityFramework.ru": {
+              "target": "Package",
+              "version": "[6.2.0, )"
+            },
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[3.1.1-ci794, )"
+            },
+            "MaterialDesignExtensions": {
+              "target": "Package",
+              "version": "[4.0.0-a02, )"
+            },
+            "MaterialDesignInXamlToolkitAddOns": {
+              "target": "Package",
+              "version": "[0.0.6, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[5.1.1-ci794, )"
+            },
+            "MaterialDesignThemes.MahApps": {
+              "target": "Package",
+              "version": "[3.1.1-ci794, )"
+            },
+            "MaterialDesignThemes.Wpf": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Syncfusion.Shared.Base": {
+              "target": "Package",
+              "version": "[27.1.56, )"
+            },
+            "Syncfusion.Shared.WPF": {
+              "target": "Package",
+              "version": "[27.1.56, )"
+            },
+            "Syncfusion.Tools.WPF": {
+              "target": "Package",
+              "version": "[27.1.56, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

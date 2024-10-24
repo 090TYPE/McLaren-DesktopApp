@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "dgSpecHash": "Oj65ZhiMF3U=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\090TYPE\\.nuget\\packages\\controlzex\\4.3.0\\controlzex.4.3.0.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\dialogboxformaterialdesigntoolkitinxaml\\1.0.0\\dialogboxformaterialdesigntoolkitinxaml.1.0.0.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\dynamitey\\2.0.10.189\\dynamitey.2.0.10.189.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\entityframework\\6.5.1\\entityframework.6.5.1.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\entityframework.ru\\6.2.0\\entityframework.ru.6.2.0.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\extendedwpfconverters\\2.0.3\\extendedwpfconverters.2.0.3.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\extendedwpfvisualtreehelper\\2.0.2\\extendedwpfvisualtreehelper.2.0.2.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\mahapps.metro\\2.0.0\\mahapps.metro.2.0.0.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\materialdesigncolors\\3.1.1-ci794\\materialdesigncolors.3.1.1-ci794.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\materialdesignextensions\\4.0.0-a02\\materialdesignextensions.4.0.0-a02.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\materialdesigninxamltoolkitaddons\\0.0.6\\materialdesigninxamltoolkitaddons.0.0.6.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\materialdesignthemes\\5.1.1-ci794\\materialdesignthemes.5.1.1-ci794.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\materialdesignthemes.mahapps\\3.1.1-ci794\\materialdesignthemes.mahapps.3.1.1-ci794.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\materialdesignthemes.wpf\\1.0.1\\materialdesignthemes.wpf.1.0.1.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\syncfusion.licensing\\27.1.56\\syncfusion.licensing.27.1.56.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\syncfusion.shared.base\\27.1.56\\syncfusion.shared.base.27.1.56.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\syncfusion.shared.wpf\\27.1.56\\syncfusion.shared.wpf.27.1.56.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\syncfusion.tools.wpf\\27.1.56\\syncfusion.tools.wpf.27.1.56.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\system.data.datasetextensions\\4.6.0-preview3.19128.7\\system.data.datasetextensions.4.6.0-preview3.19128.7.nupkg.sha512",
+    "C:\\Users\\090TYPE\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Версия обнаруженного пакета нарушает ограничение зависимости: EntityFramework.ru 6.2.0 требуется EntityFramework (= 6.2.0), но в результате разрешения получена версия EntityFramework 6.5.1.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.7.2",
+        ".NETFramework,Version=v4.7.2/win",
+        ".NETFramework,Version=v4.7.2/win-arm64",
+        ".NETFramework,Version=v4.7.2/win-x64",
+        ".NETFramework,Version=v4.7.2/win-x86"
+      ]
+    }
+  ]
+}
