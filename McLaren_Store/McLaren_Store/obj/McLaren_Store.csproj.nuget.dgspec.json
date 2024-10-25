@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj": {}
+    "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj": {}
   },
   "projects": {
-    "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj": {
+    "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj",
+        "projectUniqueName": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj",
         "projectName": "McLaren_Store",
-        "projectPath": "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj",
+        "projectPath": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\McLaren_Store.csproj",
         "packagesPath": "C:\\Users\\090TYPE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\McLaren_Store\\obj\\",
+        "outputPath": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -78,6 +78,10 @@
             "MaterialDesignThemes.Wpf": {
               "target": "Package",
               "version": "[1.0.1, )"
+            },
+            "ReactiveUI.WPF": {
+              "target": "Package",
+              "version": "[20.1.63, )"
             },
             "Syncfusion.Shared.Base": {
               "target": "Package",

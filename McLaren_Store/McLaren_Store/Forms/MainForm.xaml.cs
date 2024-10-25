@@ -17,11 +17,25 @@ namespace McLaren_Store.Forms
 	/// <summary>
 	/// Логика взаимодействия для MainForm.xaml
 	/// </summary>
+
 	public partial class MainForm : Window
 	{
 		public MainForm()
 		{
 			InitializeComponent();
 		}
+
+		private void MinimizeWindow_Click(object sender, RoutedEventArgs e)
+		{
+			// Сворачиваем окно
+			this.WindowState = WindowState.Minimized;
+		}
+
+		private void CloseWindow_Click(object sender, RoutedEventArgs e)
+		{
+			// Закрываем окно
+			this.Close();
+		}
 	}
 }
+

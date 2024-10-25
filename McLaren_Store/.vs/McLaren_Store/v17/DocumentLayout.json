@@ -1,12 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\090TYPE\\source\\repos\\McLaren_Store\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|c:\\users\\090type\\documents\\github\\mclaren-desktopapp\\mclaren_store\\mclaren_store\\forms\\mainform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\mainform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|c:\\users\\090type\\documents\\github\\mclaren-desktopapp\\mclaren_store\\mclaren_store\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|c:\\users\\090type\\documents\\github\\mclaren-desktopapp\\mclaren_store\\mclaren_store\\it_must_be_done.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\it_must_be_done.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 328,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IT_MUST_BE_DONE.txt",
+              "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\IT_MUST_BE_DONE.txt",
+              "RelativeDocumentMoniker": "McLaren_Store\\IT_MUST_BE_DONE.txt",
+              "ToolTip": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\IT_MUST_BE_DONE.txt",
+              "RelativeToolTip": "McLaren_Store\\IT_MUST_BE_DONE.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-25T08:08:22.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\App.xaml",
+              "RelativeDocumentMoniker": "McLaren_Store\\App.xaml",
+              "ToolTip": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\App.xaml",
+              "RelativeToolTip": "McLaren_Store\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-25T07:17:01.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.xaml",
+              "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\MainForm.xaml",
+              "RelativeDocumentMoniker": "McLaren_Store\\Forms\\MainForm.xaml",
+              "ToolTip": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\MainForm.xaml",
+              "RelativeToolTip": "McLaren_Store\\Forms\\MainForm.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-25T06:39:15.544Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
