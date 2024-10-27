@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DBHelper.cs" />
+    <Compile Include="Assets\UserSession.cs" />
     <Compile Include="DataBase\Cars.cs">
       <DependentUpon>McLarenDB.tt</DependentUpon>
     </Compile>
@@ -109,6 +110,9 @@
     </Compile>
     <Compile Include="DataBase\Sales.cs">
       <DependentUpon>McLarenDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminPanel.xaml.cs">
+      <DependentUpon>AdminPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\Authorization.xaml.cs">
       <DependentUpon>Authorization.xaml</DependentUpon>
@@ -165,6 +169,9 @@
     <PackageReference Include="EntityFramework.ru">
       <Version>6.2.0</Version>
     </PackageReference>
+    <PackageReference Include="MahApps.Metro">
+      <Version>3.0.0-alpha0513</Version>
+    </PackageReference>
     <PackageReference Include="MaterialDesignColors">
       <Version>3.1.1-ci794</Version>
     </PackageReference>
@@ -209,6 +216,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Forms\AdminPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\Authorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -238,27 +249,27 @@
       <LastGenOutput>McLarenDB.cs</LastGenOutput>
     </Content>
     <Resource Include="IT_MUST_BE_DONE.txt" />
-    <None Include="Resources\2015 McLaren P1 036.jpg">
+    <Resource Include="Resources\2015 McLaren P1 036.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\def9f6ac7b20183495e5f0b4be6fbd82.jpg">
+    </Resource>
+    <Resource Include="Resources\def9f6ac7b20183495e5f0b4be6fbd82.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\6f22b6as-960.jpg">
+    </Resource>
+    <Resource Include="Resources\6f22b6as-960.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\Article_170830_860_575.jpg">
+    </Resource>
+    <Resource Include="Resources\Article_170830_860_575.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\mclaren-artura_11.jpg">
+    </Resource>
+    <Resource Include="Resources\mclaren-artura_11.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\1570637024_85_52.jpg">
+    </Resource>
+    <Resource Include="Resources\1570637024_85_52.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\McLaren-Logo-PNG-File.png">
+    </Resource>
+    <Resource Include="Resources\McLaren-Logo-PNG-File.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

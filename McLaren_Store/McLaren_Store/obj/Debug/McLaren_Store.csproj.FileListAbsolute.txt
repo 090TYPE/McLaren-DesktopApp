@@ -51,7 +51,6 @@ C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\McLaren_Store.exe
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\McLaren_Store.pdb
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\ControlzEx.dll
-C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\ControlzEx.pdb
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\ExtraTools.dll
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\DynamicData.dll
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\Dynamitey.dll
@@ -62,7 +61,6 @@ C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\ExtendedWPFConverters.dll
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\ExtendedWPFVisualTreeHelper.dll
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\MahApps.Metro.dll
-C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\MahApps.Metro.pdb
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\MaterialDesignColors.dll
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\MaterialDesignColors.pdb
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\MaterialDesignExtensions.dll
@@ -128,10 +126,6 @@ C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\McLaren_.DDDA81DC.Up2Date
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\McLaren_Store.exe
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\McLaren_Store.pdb
-C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\Resources\McLaren-Logo-PNG-File.png
-C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\Resources\2015 McLaren P1 036.jpg
-C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\Resources\def9f6ac7b20183495e5f0b4be6fbd82.jpg
-C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\Resources\6f22b6as-960.jpg
-C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\Resources\Article_170830_860_575.jpg
-C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\Resources\mclaren-artura_11.jpg
-C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\Resources\1570637024_85_52.jpg
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\AdminPanel.g.cs
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\AdminPanel.baml

@@ -38,37 +38,129 @@
         </Style>
     </Window.Resources>
 
-    <!-- Основной макет с фиксированным верхним меню и прокручиваемой областью -->
-    <DockPanel LastChildFill="True">
-        <!-- Верхняя панель навигации с фиксированными кнопками -->
-        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="{StaticResource PrimaryBrush}">
-            <Button Width="100" Height="40" Background="Transparent" BorderThickness="0">
-                <Image Source="/Resources/McLaren-Logo-PNG-File.png" Stretch="Uniform" />
-            </Button>
-            <Button Content="Купить" Width="100" />
-            <Button Content="Узнать больше" Width="100" />
-            <Button Content="Личный кабинет" Width="100" />
+    <!-- Окно с фоновым цветом внутри и закругленными углами -->
+    <Border Background="{StaticResource PrimaryBrush}" CornerRadius="20" Padding="10">
+        <DockPanel LastChildFill="True">
+            <!-- Верхняя панель навигации с фиксированными кнопками -->
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="{StaticResource PrimaryBrush}">
+                <Button Width="100" Height="40" Background="Transparent" BorderThickness="0">
+                    <Image Source="pack://application:,,,/Resources/McLaren-Logo-PNG-File.png" Stretch="Uniform" />
+                </Button>
+                <Button Content="Купить" Width="100" Click="Buy_Click" >
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Button.PreviewMouseDown">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                        To="0.9"
+                                        Duration="0:0:0.1" />
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                        To="0.9"
+                                        Duration="0:0:0.1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Button.PreviewMouseUp">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                        To="1"
+                                        Duration="0:0:0.1" />
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                        To="1"
+                                        Duration="0:0:0.1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+                <Button Content="Узнать больше" Width="100" >
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Button.PreviewMouseDown">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                        To="0.9"
+                                        Duration="0:0:0.1" />
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                        To="0.9"
+                                        Duration="0:0:0.1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Button.PreviewMouseUp">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                        To="1"
+                                        Duration="0:0:0.1" />
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                        To="1"
+                                        Duration="0:0:0.1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+                <Button Content="Личный кабинет" Width="100" Click="PersonalAccount_Click">
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Button.PreviewMouseDown">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                        To="0.9"
+                                        Duration="0:0:0.1" />
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                        To="0.9"
+                                        Duration="0:0:0.1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                        <EventTrigger RoutedEvent="Button.PreviewMouseUp">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleX)"
+                                        To="1"
+                                        Duration="0:0:0.1" />
+                                    <DoubleAnimation
+                                        Storyboard.TargetProperty="RenderTransform.(ScaleTransform.ScaleY)"
+                                        To="1"
+                                        Duration="0:0:0.1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
 
-            <!-- Кнопки управления окном справа -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="—" Width="40" Click="MinimizeWindow_Click" />
-                <Button Content="✖" Width="40" Click="CloseWindow_Click" />
+                <!-- Кнопки управления окном справа -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="—" Width="40" Click="MinimizeWindow_Click" />
+                    <Button Content="✖" Width="40" Click="CloseWindow_Click" />
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
 
-        <!-- Прокручиваемая область для изображений -->
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <WrapPanel HorizontalAlignment="Center" Margin="10">
-                <!-- Добавьте сюда изображения, которые будут прокручиваться -->
-                <Image Source="/Resources/1570637024_85_52.jpg" Width="200" Height="150" Margin="5" />
-                <Image Source="/Resources/2015 McLaren P1 036.jpg"  Width="200" Height="150" Margin="5" />
-                <Image Source="/Resources/6f22b6as-960.jpg"  Width="200" Height="150" Margin="5" />
-                <Image Source="/Resources/Article_170830_860_575.jpg"  Width="200" Height="150" Margin="5" />
-                <Image Source="/Resources/def9f6ac7b20183495e5f0b4be6fbd82.jpg"  Width="200" Height="150" Margin="5" />
-                <Image Source="/Resources/mclaren-artura_11.jpg"  Width="200" Height="150" Margin="5" />
-
-                <!-- Добавьте больше изображений по необходимости -->
-            </WrapPanel>
-        </ScrollViewer>
-    </DockPanel>
+            <!-- Прокручиваемая область для изображений -->
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <WrapPanel HorizontalAlignment="Center" Margin="10">
+                    <Image Source="pack://application:,,,/Resources/1570637024_85_52.jpg" Width="200" Height="150" Margin="5" />
+                    <Image Source="pack://application:,,,/Resources/2015 McLaren P1 036.jpg" Width="200" Height="150" Margin="5" />
+                    <Image Source="pack://application:,,,/Resources/6f22b6as-960.jpg" Width="200" Height="150" Margin="5" />
+                    <Image Source="pack://application:,,,/Resources/Article_170830_860_575.jpg" Width="200" Height="150" Margin="5" />
+                    <Image Source="pack://application:,,,/Resources/def9f6ac7b20183495e5f0b4be6fbd82.jpg" Width="200" Height="150" Margin="5" />
+                    <Image Source="pack://application:,,,/Resources/mclaren-artura_11.jpg" Width="200" Height="150" Margin="5" />
+                </WrapPanel>
+            </ScrollViewer>
+        </DockPanel>
+    </Border>
 </Window>

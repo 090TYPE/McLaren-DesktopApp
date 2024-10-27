@@ -4,9 +4,92 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:McLaren_Store.Forms"
+        WindowStyle="None"
         mc:Ignorable="d"
-        Title="Registrations" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Registrations" Height="480" Width="400" >
+    <Window.Resources>
+        <Color x:Key="PrimaryColor">#212121</Color>
+        <Color x:Key="SecondaryColor">#F5F5F5</Color>
+        <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
+        <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryColor}" />
+
+        <!-- Style for buttons -->
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}" />
+            <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                             CornerRadius="10"
+                             BorderBrush="{TemplateBinding BorderBrush}"
+                             BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style for TextBox -->
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#26252d" />
+            <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}" />
+            <Setter Property="Padding" Value="8" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+
+        <Style TargetType="PasswordBox">
+            <Setter Property="Background" Value="#26252d" />
+            <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}" />
+            <Setter Property="Padding" Value="8" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+    </Window.Resources>
+
+    <Border Background="{StaticResource PrimaryBrush}" CornerRadius="15" Padding="10">
+        <Grid>
+            <!-- Top-right corner buttons -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,10,404" Width="73">
+                <Button Content="—" Width="30" Height="30" Click="MinimizeWindow_Click" />
+                <Button Content="✖" Width="30" Height="30" Click="CloseWindow_Click" />
+            </StackPanel>
+
+            <StackPanel Margin="10,40,10,10">
+                <!-- Added margin to leave space for the buttons -->
+                <TextBlock Text="Логин" Foreground="{StaticResource SecondaryBrush}" />
+                <TextBox Name="LoginTextBox" 
+                      Tag="Введите ваш логин" />
+
+                <TextBlock Text="Имя" Foreground="{StaticResource SecondaryBrush}" />
+                <TextBox Name="FirstNameTextBox" 
+      Tag="Введите ваше имя" />
+
+                <TextBlock Text="Фамилия" Foreground="{StaticResource SecondaryBrush}" />
+                <TextBox Name="LastNameTextBox" 
+      Tag="Введите вашу Фамилию" />
+                <TextBlock Text="Пароль" Foreground="{StaticResource SecondaryBrush}" />
+                <PasswordBox Name="PasswordBox1" 
+                          Tag="Введите ваш пароль" />
+
+                <TextBlock Text="Повторите пароль" Foreground="{StaticResource SecondaryBrush}" />
+                <PasswordBox Name="PasswordBox2" 
+                          Tag="Введите ваш пароль" />
+
+                <Button Content="Регистрация" Height="40" Width="120" Click="Reg_Click"/>
+
+                <Button Content="Назад" Height="40" Width="120" Click="Back_Click"/>
+
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

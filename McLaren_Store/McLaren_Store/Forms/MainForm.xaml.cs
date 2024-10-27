@@ -20,6 +20,9 @@ namespace McLaren_Store.Forms
 
 	public partial class MainForm : Window
 	{
+		private Authorization _authorizationWindow;
+		
+
 		public MainForm()
 		{
 			InitializeComponent();
@@ -35,6 +38,26 @@ namespace McLaren_Store.Forms
 		{
 			// Закрываем окно
 			this.Close();
+		}
+
+		private void PersonalAccount_Click(object sender, RoutedEventArgs e)
+		{
+			
+			if (_authorizationWindow == null || !_authorizationWindow.IsVisible)
+			{
+				_authorizationWindow = new Authorization();
+				_authorizationWindow.Closed += (s, args) => _authorizationWindow = null; 
+				_authorizationWindow.Show();
+			}
+			else
+			{
+				_authorizationWindow.Activate();
+			}
+		}
+
+		private void Buy_Click(object sender, RoutedEventArgs e)
+		{
+			
 		}
 	}
 }

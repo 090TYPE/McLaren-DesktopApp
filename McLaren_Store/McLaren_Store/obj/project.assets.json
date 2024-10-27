@@ -2,10 +2,11 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
-      "ControlzEx/4.3.0": {
+      "ControlzEx/7.0.0-rc0118": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77",
+          "System.Memory": "4.5.5"
         },
         "frameworkAssemblies": [
           "System.Web",
@@ -13,12 +14,12 @@
         ],
         "compile": {
           "lib/net462/ControlzEx.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml"
           }
         },
         "runtime": {
           "lib/net462/ControlzEx.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml"
           }
         }
       },
@@ -131,23 +132,31 @@
           }
         }
       },
-      "MahApps.Metro/2.0.0": {
+      "MahApps.Metro/3.0.0-alpha0513": {
         "type": "package",
         "dependencies": {
-          "ControlzEx": "4.3.0"
+          "ControlzEx": "7.0.0-rc0118",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations",
           "System.Configuration"
         ],
         "compile": {
-          "lib/net47/MahApps.Metro.dll": {
-            "related": ".pdb;.xml"
+          "lib/net462/MahApps.Metro.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net47/MahApps.Metro.dll": {
-            "related": ".pdb;.xml"
+          "lib/net462/MahApps.Metro.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net462/de/MahApps.Metro.resources.dll": {
+            "locale": "de"
           }
         }
       },
@@ -324,24 +333,15 @@
           "lib/net45/_._": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.77": {
         "type": "package",
-        "frameworkAssemblies": [
-          "PresentationCore",
-          "PresentationFramework",
-          "System",
-          "System.Core",
-          "System.XML",
-          "System.Xaml",
-          "WindowsBase"
-        ],
         "compile": {
-          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+          "lib/net462/Microsoft.Xaml.Behaviors.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+          "lib/net462/Microsoft.Xaml.Behaviors.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -672,10 +672,11 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
-      "ControlzEx/4.3.0": {
+      "ControlzEx/7.0.0-rc0118": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77",
+          "System.Memory": "4.5.5"
         },
         "frameworkAssemblies": [
           "System.Web",
@@ -683,12 +684,12 @@
         ],
         "compile": {
           "lib/net462/ControlzEx.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml"
           }
         },
         "runtime": {
           "lib/net462/ControlzEx.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml"
           }
         }
       },
@@ -801,23 +802,31 @@
           }
         }
       },
-      "MahApps.Metro/2.0.0": {
+      "MahApps.Metro/3.0.0-alpha0513": {
         "type": "package",
         "dependencies": {
-          "ControlzEx": "4.3.0"
+          "ControlzEx": "7.0.0-rc0118",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations",
           "System.Configuration"
         ],
         "compile": {
-          "lib/net47/MahApps.Metro.dll": {
-            "related": ".pdb;.xml"
+          "lib/net462/MahApps.Metro.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net47/MahApps.Metro.dll": {
-            "related": ".pdb;.xml"
+          "lib/net462/MahApps.Metro.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net462/de/MahApps.Metro.resources.dll": {
+            "locale": "de"
           }
         }
       },
@@ -994,24 +1003,15 @@
           "lib/net45/_._": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.77": {
         "type": "package",
-        "frameworkAssemblies": [
-          "PresentationCore",
-          "PresentationFramework",
-          "System",
-          "System.Core",
-          "System.XML",
-          "System.Xaml",
-          "WindowsBase"
-        ],
         "compile": {
-          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+          "lib/net462/Microsoft.Xaml.Behaviors.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+          "lib/net462/Microsoft.Xaml.Behaviors.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -1342,10 +1342,11 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-arm64": {
-      "ControlzEx/4.3.0": {
+      "ControlzEx/7.0.0-rc0118": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77",
+          "System.Memory": "4.5.5"
         },
         "frameworkAssemblies": [
           "System.Web",
@@ -1353,12 +1354,12 @@
         ],
         "compile": {
           "lib/net462/ControlzEx.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml"
           }
         },
         "runtime": {
           "lib/net462/ControlzEx.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml"
           }
         }
       },
@@ -1471,23 +1472,31 @@
           }
         }
       },
-      "MahApps.Metro/2.0.0": {
+      "MahApps.Metro/3.0.0-alpha0513": {
         "type": "package",
         "dependencies": {
-          "ControlzEx": "4.3.0"
+          "ControlzEx": "7.0.0-rc0118",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations",
           "System.Configuration"
         ],
         "compile": {
-          "lib/net47/MahApps.Metro.dll": {
-            "related": ".pdb;.xml"
+          "lib/net462/MahApps.Metro.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net47/MahApps.Metro.dll": {
-            "related": ".pdb;.xml"
+          "lib/net462/MahApps.Metro.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net462/de/MahApps.Metro.resources.dll": {
+            "locale": "de"
           }
         }
       },
@@ -1664,24 +1673,15 @@
           "lib/net45/_._": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.77": {
         "type": "package",
-        "frameworkAssemblies": [
-          "PresentationCore",
-          "PresentationFramework",
-          "System",
-          "System.Core",
-          "System.XML",
-          "System.Xaml",
-          "WindowsBase"
-        ],
         "compile": {
-          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+          "lib/net462/Microsoft.Xaml.Behaviors.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+          "lib/net462/Microsoft.Xaml.Behaviors.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -2012,10 +2012,11 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
-      "ControlzEx/4.3.0": {
+      "ControlzEx/7.0.0-rc0118": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77",
+          "System.Memory": "4.5.5"
         },
         "frameworkAssemblies": [
           "System.Web",
@@ -2023,12 +2024,12 @@
         ],
         "compile": {
           "lib/net462/ControlzEx.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml"
           }
         },
         "runtime": {
           "lib/net462/ControlzEx.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml"
           }
         }
       },
@@ -2141,23 +2142,31 @@
           }
         }
       },
-      "MahApps.Metro/2.0.0": {
+      "MahApps.Metro/3.0.0-alpha0513": {
         "type": "package",
         "dependencies": {
-          "ControlzEx": "4.3.0"
+          "ControlzEx": "7.0.0-rc0118",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations",
           "System.Configuration"
         ],
         "compile": {
-          "lib/net47/MahApps.Metro.dll": {
-            "related": ".pdb;.xml"
+          "lib/net462/MahApps.Metro.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net47/MahApps.Metro.dll": {
-            "related": ".pdb;.xml"
+          "lib/net462/MahApps.Metro.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net462/de/MahApps.Metro.resources.dll": {
+            "locale": "de"
           }
         }
       },
@@ -2334,24 +2343,15 @@
           "lib/net45/_._": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.77": {
         "type": "package",
-        "frameworkAssemblies": [
-          "PresentationCore",
-          "PresentationFramework",
-          "System",
-          "System.Core",
-          "System.XML",
-          "System.Xaml",
-          "WindowsBase"
-        ],
         "compile": {
-          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+          "lib/net462/Microsoft.Xaml.Behaviors.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+          "lib/net462/Microsoft.Xaml.Behaviors.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -2682,10 +2682,11 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
-      "ControlzEx/4.3.0": {
+      "ControlzEx/7.0.0-rc0118": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Xaml.Behaviors.Wpf": "1.1.19"
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77",
+          "System.Memory": "4.5.5"
         },
         "frameworkAssemblies": [
           "System.Web",
@@ -2693,12 +2694,12 @@
         ],
         "compile": {
           "lib/net462/ControlzEx.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml"
           }
         },
         "runtime": {
           "lib/net462/ControlzEx.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml"
           }
         }
       },
@@ -2811,23 +2812,31 @@
           }
         }
       },
-      "MahApps.Metro/2.0.0": {
+      "MahApps.Metro/3.0.0-alpha0513": {
         "type": "package",
         "dependencies": {
-          "ControlzEx": "4.3.0"
+          "ControlzEx": "7.0.0-rc0118",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations",
           "System.Configuration"
         ],
         "compile": {
-          "lib/net47/MahApps.Metro.dll": {
-            "related": ".pdb;.xml"
+          "lib/net462/MahApps.Metro.dll": {
+            "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net47/MahApps.Metro.dll": {
-            "related": ".pdb;.xml"
+          "lib/net462/MahApps.Metro.dll": {
+            "related": ".xml"
+          }
+        },
+        "resource": {
+          "lib/net462/de/MahApps.Metro.resources.dll": {
+            "locale": "de"
           }
         }
       },
@@ -3004,24 +3013,15 @@
           "lib/net45/_._": {}
         }
       },
-      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.77": {
         "type": "package",
-        "frameworkAssemblies": [
-          "PresentationCore",
-          "PresentationFramework",
-          "System",
-          "System.Core",
-          "System.XML",
-          "System.Xaml",
-          "WindowsBase"
-        ],
         "compile": {
-          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+          "lib/net462/Microsoft.Xaml.Behaviors.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net45/Microsoft.Xaml.Behaviors.dll": {
+          "lib/net462/Microsoft.Xaml.Behaviors.dll": {
             "related": ".pdb;.xml"
           }
         }
@@ -3353,27 +3353,21 @@
     }
   },
   "libraries": {
-    "ControlzEx/4.3.0": {
-      "sha512": "I7PKmQNIMO9+s4s50WXOApotnyEKL9G8vvYrZY7CLe7nufXwRSv+vWPrd4BYwZDQiWHbBwnXsC8zUPgPnEWr6g==",
+    "ControlzEx/7.0.0-rc0118": {
+      "sha512": "Mv3m4Z4371qZYrV4Wtu0ha5H55hg5Kv6twTXLz+uOr0hI39V2ecM1To19P5sicq5jfWTyoZGqmXIk2vONjFGrg==",
       "type": "package",
-      "path": "controlzex/4.3.0",
+      "path": "controlzex/7.0.0-rc0118",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "controlzex.4.3.0.nupkg.sha512",
+        "controlzex.7.0.0-rc0118.nupkg.sha512",
         "controlzex.nuspec",
-        "lib/net45/ControlzEx.dll",
-        "lib/net45/ControlzEx.pdb",
-        "lib/net45/ControlzEx.xml",
         "lib/net462/ControlzEx.dll",
-        "lib/net462/ControlzEx.pdb",
         "lib/net462/ControlzEx.xml",
-        "lib/netcoreapp3.0/ControlzEx.dll",
-        "lib/netcoreapp3.0/ControlzEx.pdb",
-        "lib/netcoreapp3.0/ControlzEx.xml",
-        "lib/netcoreapp3.1/ControlzEx.dll",
-        "lib/netcoreapp3.1/ControlzEx.pdb",
-        "lib/netcoreapp3.1/ControlzEx.xml",
+        "lib/net6.0-windows7.0/ControlzEx.dll",
+        "lib/net6.0-windows7.0/ControlzEx.xml",
+        "lib/net8.0-windows7.0/ControlzEx.dll",
+        "lib/net8.0-windows7.0/ControlzEx.xml",
         "logo-mini.png"
       ]
     },
@@ -3543,31 +3537,27 @@
         "lib/netcoreapp3.1/ExtendedWPFVisualTreeHelper.xml"
       ]
     },
-    "MahApps.Metro/2.0.0": {
-      "sha512": "btjlE3Q8iebJB+4TBJZLcJBQZshKYqfkcATj9AS8veq4a506uE71NOTE1OSoavOJ70xasBjcdc+VuN17l+kIqw==",
+    "MahApps.Metro/3.0.0-alpha0513": {
+      "sha512": "/N8xoarlsTVIXEF90+Ff6gG5g+Xq55nVd9/dXJ5GX5ZDHAtKhj0yB3Q0EhGsDEHthdnMBCGELrr6Jtg1T9gXoQ==",
       "type": "package",
-      "path": "mahapps.metro/2.0.0",
+      "path": "mahapps.metro/3.0.0-alpha0513",
+      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net452/MahApps.Metro.dll",
-        "lib/net452/MahApps.Metro.pdb",
-        "lib/net452/MahApps.Metro.xml",
-        "lib/net46/MahApps.Metro.dll",
-        "lib/net46/MahApps.Metro.pdb",
-        "lib/net46/MahApps.Metro.xml",
-        "lib/net47/MahApps.Metro.dll",
-        "lib/net47/MahApps.Metro.pdb",
-        "lib/net47/MahApps.Metro.xml",
-        "lib/netcoreapp3.0/MahApps.Metro.dll",
-        "lib/netcoreapp3.0/MahApps.Metro.pdb",
-        "lib/netcoreapp3.0/MahApps.Metro.xml",
-        "lib/netcoreapp3.1/MahApps.Metro.dll",
-        "lib/netcoreapp3.1/MahApps.Metro.pdb",
-        "lib/netcoreapp3.1/MahApps.Metro.xml",
-        "mahapps.metro.2.0.0.nupkg.sha512",
+        "lib/net462/MahApps.Metro.dll",
+        "lib/net462/MahApps.Metro.xml",
+        "lib/net462/de/MahApps.Metro.resources.dll",
+        "lib/net6.0-windows7.0/MahApps.Metro.dll",
+        "lib/net6.0-windows7.0/MahApps.Metro.xml",
+        "lib/net6.0-windows7.0/de/MahApps.Metro.resources.dll",
+        "lib/net8.0-windows7.0/MahApps.Metro.dll",
+        "lib/net8.0-windows7.0/MahApps.Metro.xml",
+        "lib/net8.0-windows7.0/de/MahApps.Metro.resources.dll",
+        "mahapps.metro.3.0.0-alpha0513.nupkg.sha512",
         "mahapps.metro.logo.png",
-        "mahapps.metro.nuspec"
+        "mahapps.metro.nuspec",
+        "tools/VisualStudioToolsManifest.xml"
       ]
     },
     "MaterialDesignColors/3.1.1-ci794": {
@@ -3818,27 +3808,24 @@
         "version.txt"
       ]
     },
-    "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
-      "sha512": "8PZKqw9QOcu42xk8puY4P1+EXHL9YGOR9b7qhaYx5cILHul456H073tj99vyPcCt0W0781T9RwHqkx507ZyUpQ==",
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.77": {
+      "sha512": "MCu674ZETgU18EbxfwIlRpUPJ02YbZenLsMCXTkpeA7KUBpXfFaOUDlEO+7UWu5AFnUoydg+aQENJkuaZPheMQ==",
       "type": "package",
-      "path": "microsoft.xaml.behaviors.wpf/1.1.39",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.77",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net45/Design/Microsoft.Xaml.Behaviors.Design.dll",
-        "lib/net45/Microsoft.Xaml.Behaviors.dll",
-        "lib/net45/Microsoft.Xaml.Behaviors.pdb",
-        "lib/net45/Microsoft.Xaml.Behaviors.xml",
-        "lib/net5.0-windows7.0/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
-        "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.dll",
-        "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.pdb",
-        "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.xml",
-        "lib/netcoreapp3.1/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
-        "lib/netcoreapp3.1/Microsoft.Xaml.Behaviors.dll",
-        "lib/netcoreapp3.1/Microsoft.Xaml.Behaviors.pdb",
-        "lib/netcoreapp3.1/Microsoft.Xaml.Behaviors.xml",
-        "microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+        "lib/net462/Design/Microsoft.Xaml.Behaviors.Design.dll",
+        "lib/net462/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/net462/Microsoft.Xaml.Behaviors.dll",
+        "lib/net462/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net462/Microsoft.Xaml.Behaviors.xml",
+        "lib/net6.0-windows7.0/Design/Microsoft.Xaml.Behaviors.DesignTools.dll",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.pdb",
+        "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.xml",
+        "microsoft.xaml.behaviors.wpf.1.1.77.nupkg.sha512",
         "microsoft.xaml.behaviors.wpf.nuspec",
         "tools/Install.ps1"
       ]
@@ -4548,6 +4535,7 @@
       "DialogBoxForMaterialDesignToolkitInXaml >= 1.0.0",
       "EntityFramework >= 6.5.1",
       "EntityFramework.ru >= 6.2.0",
+      "MahApps.Metro >= 3.0.0-alpha0513",
       "MaterialDesignColors >= 3.1.1-ci794",
       "MaterialDesignExtensions >= 4.0.0-a02",
       "MaterialDesignInXamlToolkitAddOns >= 0.0.6",
@@ -4614,6 +4602,10 @@
           "EntityFramework.ru": {
             "target": "Package",
             "version": "[6.2.0, )"
+          },
+          "MahApps.Metro": {
+            "target": "Package",
+            "version": "[3.0.0-alpha0513, )"
           },
           "MaterialDesignColors": {
             "target": "Package",
