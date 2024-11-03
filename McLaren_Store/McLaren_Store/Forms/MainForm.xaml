@@ -144,7 +144,7 @@
                 </Button>
 
                 <!-- Кнопки управления окном справа -->
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"  VerticalAlignment="Top" Height="50" Width="101" Margin="240,0,0,0">
                     <Button Content="—" Width="40" Click="MinimizeWindow_Click" />
                     <Button Content="✖" Width="40" Click="CloseWindow_Click" />
                 </StackPanel>

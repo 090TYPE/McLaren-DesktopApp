@@ -1,4 +1,5 @@
-﻿using System;
+﻿using McLaren_Store.Assets;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,44 +22,95 @@ namespace McLaren_Store.Forms
 	public partial class MainForm : Window
 	{
 		private Authorization _authorizationWindow;
-		
+		private PersonalAccount _personalAccountWindow;
+		private CarsWindow _cars;
 
 		public MainForm()
 		{
 			InitializeComponent();
+
 		}
 
 		private void MinimizeWindow_Click(object sender, RoutedEventArgs e)
 		{
-			// Сворачиваем окно
 			this.WindowState = WindowState.Minimized;
 		}
 
 		private void CloseWindow_Click(object sender, RoutedEventArgs e)
 		{
-			// Закрываем окно
 			this.Close();
 		}
 
 		private void PersonalAccount_Click(object sender, RoutedEventArgs e)
 		{
-			
-			if (_authorizationWindow == null || !_authorizationWindow.IsVisible)
+			// Проверяем, есть ли активный пользователь в UserSession
+			if (!UserSession.Instance.IsLoggedIn)
 			{
-				_authorizationWindow = new Authorization();
-				_authorizationWindow.Closed += (s, args) => _authorizationWindow = null; 
-				_authorizationWindow.Show();
+				if (_authorizationWindow == null || !_authorizationWindow.IsVisible)
+				{
+					_authorizationWindow = new Authorization();
+					_authorizationWindow.Closed += (s, args) => _authorizationWindow = null;
+					_authorizationWindow.Show();
+					this.Close();
+				}
+				else
+				{
+					_authorizationWindow.Activate();
+				}
+			}
+			else
+			{
+				OpenPersonalAccount(); // Открываем личный кабинет, если пользователь авторизован
+			}
+		}
+
+		private void OpenPersonalAccount()
+		{
+			if (_personalAccountWindow == null || !_personalAccountWindow.IsVisible)
+			{
+				_personalAccountWindow = new PersonalAccount();
+				_personalAccountWindow.Closed += (s, args) => _personalAccountWindow = null;
+				_personalAccountWindow.Show();
 				this.Close();
 			}
 			else
 			{
-				_authorizationWindow.Activate();
+				_personalAccountWindow.Activate();
 			}
 		}
 
 		private void Buy_Click(object sender, RoutedEventArgs e)
 		{
-			
+			// Проверяем, есть ли активный пользователь в UserSession
+			if (!UserSession.Instance.IsLoggedIn)
+			{
+				if (_authorizationWindow == null || !_authorizationWindow.IsVisible)
+				{
+					_authorizationWindow = new Authorization();
+					_authorizationWindow.Closed += (s, args) => _authorizationWindow = null;
+					_authorizationWindow.Show();
+					this.Close();
+				}
+				else
+				{
+					_authorizationWindow.Activate();
+				}
+			}
+			else
+			{
+				// Если пользователь авторизован, открываем окно с автомобилями
+				if (_cars == null || !_cars.IsVisible)
+				{
+					_cars = new CarsWindow();
+					_cars.Closed += (s, args) => _cars = null;
+					_cars.Show();
+					this.Close();
+				}
+				else
+				{
+					_cars.Activate(); // Если окно уже открыто, активируем его
+				}
+			}
 		}
 	}
 }

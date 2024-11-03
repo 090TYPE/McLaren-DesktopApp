@@ -51,5 +51,7 @@ namespace McLaren_Store.Assets
 		{
 			CurrentUser = null;
 		}
+
+		public bool IsLoggedIn => CurrentUser != null;
 	}
 }

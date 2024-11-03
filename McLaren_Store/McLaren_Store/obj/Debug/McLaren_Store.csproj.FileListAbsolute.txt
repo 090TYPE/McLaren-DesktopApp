@@ -129,3 +129,7 @@ C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\de\MahApps.Metro.resources.dll
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\AdminPanel.g.cs
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\AdminPanel.baml
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\CarDetailsWindow.baml
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\CarDetailsWindow.g.cs
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\CarsWindow.baml
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\CarsWindow.g.cs

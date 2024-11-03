@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using McLaren_Store.DataBase;
+using McLaren_Store.ViewModels;
 
 namespace McLaren_Store.Assets
 {
@@ -122,6 +125,45 @@ namespace McLaren_Store.Assets
 			}).ToList();
 		}
 
+		public async Task<List<CarViewModel>> GetAllCarsAsync()
+		{
+			return await _context.Cars.Select(car => new CarViewModel
+			{
+				CarID = car.CarID,
+				Model = car.Model,
+				Price = car.Price,
+				Image = car.Image 
+			}).ToListAsync();
+		}
+
+		public async Task AddCarAsync(Cars car)
+		{
+			_context.Cars.Add(car);
+			await _context.SaveChangesAsync();
+		}
+
+
+
+		public async Task AddSaleAsync(int carId, int customerId, decimal? salePrice)
+		{
+			if (salePrice.HasValue) // Проверяем, есть ли значение
+			{
+				var sale = new Sales
+				{
+					CarID = carId,
+					CustomerID = customerId,
+					SaleDate = DateTime.Now,
+					SalePrice = salePrice.Value // Используем значение
+				};
+
+				_context.Sales.Add(sale);
+				await _context.SaveChangesAsync();
+			}
+			else
+			{
+				throw new ArgumentException("Sale price cannot be null");
+			}
+		}
 		// Пример: метод для получения клиента по имени пользователя
 		public async Task<Customers> GetCustomerByUserName(string userName)
 		{

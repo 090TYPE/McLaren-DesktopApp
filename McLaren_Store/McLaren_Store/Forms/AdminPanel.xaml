@@ -6,7 +6,36 @@
         xmlns:local="clr-namespace:McLaren_Store.Forms"
         mc:Ignorable="d"
         Title="AdminPanel" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Добавить новую машину" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+            <TextBlock Text="Модель:"/>
+            <TextBox x:Name="ModelTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Год:"/>
+            <TextBox x:Name="YearTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Цвет:"/>
+            <TextBox x:Name="ColorTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Цена:"/>
+            <TextBox x:Name="PriceTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Тип двигателя:"/>
+            <TextBox x:Name="EngineTypeTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Трансмиссия:"/>
+            <TextBox x:Name="TransmissionTextBox" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Доступность:"/>
+            <CheckBox x:Name="AvailableCheckBox" Content="Доступна" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Изображение:"/>
+            <Button Content="Загрузить изображение" Click="LoadImage_Click" Margin="0,0,0,10"/>
+            <TextBlock x:Name="ImageFileNameTextBlock" Margin="0,0,0,10"/>
+
+            <Button Content="Добавить машину" Click="AddCar_Click" Width="150"/>
+        </StackPanel>
     </Grid>
 </Window>
