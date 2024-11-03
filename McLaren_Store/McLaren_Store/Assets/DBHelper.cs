@@ -1,11 +1,15 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
 using System.Threading.Tasks;
 using McLaren_Store.DataBase;
 
 namespace McLaren_Store.Assets
 {
+
 	internal class DBHelper
 	{
+
 		private static DBHelper _instance; // Экземпляр класса
 		private readonly McLaren_StoreEntities _context; // Контекст базы данных
 
@@ -75,6 +79,47 @@ namespace McLaren_Store.Assets
 				return (UserType.Employee, employee.EmployeeID, employee.FirstName, employee.LastName);
 
 			return (UserType.None, 0, null, null); // Если пользователь не найден
+		}
+
+		public async Task<UserData> GetUserDataAsync(int userId)
+		{
+			var user = await _context.Customers
+				.Include("Sales") // Получение связанных данных о продажах
+				.FirstOrDefaultAsync(u => u.CustomerID == userId);
+
+			if (user != null)
+			{
+				return new UserData
+				{
+					FirstName = user.FirstName,
+					LastName = user.LastName,
+					PhoneNumber = user.PhoneNumber,
+					Email = user.Email,
+					Address = user.Address,
+				};
+			}
+			return null;
+		}
+
+		public async Task<List<Order>> GetOrdersByUserId(int userId)
+		{
+			var orders = await _context.Sales
+				.Where(o => o.CustomerID == userId)
+				.Select(o => new
+				{
+					SaleDate = o.SaleDate,
+					Model = o.Cars.Model,
+					Price = o.SalePrice
+				})
+				.ToListAsync();
+
+			// Format the SaleDate after retrieving data from the database
+			return orders.Select(o => new Order
+			{
+				OrderDate = o.SaleDate.HasValue ? o.SaleDate.Value.ToString("dd/MM/yyyy") : "N/A",
+				Model = o.Model,
+				Price = o.Price
+			}).ToList();
 		}
 
 		// Пример: метод для получения клиента по имени пользователя

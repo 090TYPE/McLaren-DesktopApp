@@ -48,6 +48,7 @@ namespace McLaren_Store.Forms
 				_authorizationWindow = new Authorization();
 				_authorizationWindow.Closed += (s, args) => _authorizationWindow = null; 
 				_authorizationWindow.Show();
+				this.Close();
 			}
 			else
 			{

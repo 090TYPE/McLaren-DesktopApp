@@ -8,12 +8,15 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <!-- MahApps.Metro resource dictionaries -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
-                <!-- Theme setting -->
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <!-- Define custom brushes for application -->
+            <SolidColorBrush x:Key="PrimaryBrush" Color="#212121" />
+            <SolidColorBrush x:Key="SecondaryBrush" Color="#F5F5F5" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>
