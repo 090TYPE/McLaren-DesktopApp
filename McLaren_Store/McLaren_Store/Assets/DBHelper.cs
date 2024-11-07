@@ -90,19 +90,19 @@ namespace McLaren_Store.Assets
 		private bool HasUpperCase(string input) => input.Any(char.IsUpper);
 
 
-		public async Task<(UserType userType, int userId, string firstName, string lastName)> AuthenticateUser(string userName, string password)
+		public async Task<(UserType userType, int userId, string firstName, string lastName, string email, string address, string phoneNumber)> AuthenticateUser(string userName, string password)
 		{
 			// Проверка в таблице Customers
 			var customer = await Task.Run(() => _context.Customers.FirstOrDefault(c => c.UserName == userName && c.Password == password));
 			if (customer != null)
-				return (UserType.Customer, customer.CustomerID, customer.FirstName, customer.LastName);
+				return (UserType.Customer, customer.CustomerID, customer.FirstName, customer.LastName, customer.Email, customer.Address, customer.PhoneNumber);
 
 			// Проверка в таблице Employees
 			var employee = await Task.Run(() => _context.Employees.FirstOrDefault(e => e.UserName == userName && e.Password == password));
 			if (employee != null)
-				return (UserType.Employee, employee.EmployeeID, employee.FirstName, employee.LastName);
+				return (UserType.Employee, employee.EmployeeID, employee.FirstName, employee.LastName, null, null, null); 
 
-			return (UserType.None, 0, null, null); // Если пользователь не найден
+			return (UserType.None, 0, null, null, null, null, null); // Если пользователь не найден
 		}
 
 		public async Task<UserData> GetUserDataAsync(int userId)

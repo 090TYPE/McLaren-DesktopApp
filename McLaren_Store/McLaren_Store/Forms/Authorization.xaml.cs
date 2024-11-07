@@ -43,12 +43,12 @@ namespace McLaren_Store.Forms
 			string username = LoginTextBox.Text;
 			string password = PasswordBox.Password;
 
-			var (userType, userId, firstName, lastName) = await DBHelper.Instance.AuthenticateUser(username, password);
+			var (userType, userId, firstName, lastName, Email, Adress,PhoneNumber) = await DBHelper.Instance.AuthenticateUser(username, password);
 
 			if (userType != DBHelper.UserType.None)
 			{
 				// Сохраняем данные в сессию
-				UserSession.Instance.SetUserData(userId, firstName, lastName, userType == DBHelper.UserType.Employee);
+				UserSession.Instance.SetUserData(userId, firstName, lastName, userType == DBHelper.UserType.Employee,Email,Adress,PhoneNumber);
 
 				// Открываем нужное окно в зависимости от типа пользователя
 				if (userType == DBHelper.UserType.Employee)

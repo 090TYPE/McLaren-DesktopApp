@@ -36,14 +36,17 @@ namespace McLaren_Store.Assets
 
 		private UserSession() { }
 
-		public void SetUserData(int userId, string firstName, string lastName, bool isEmployee)
+		public void SetUserData(int userId, string firstName, string lastName, bool isEmployee,string email,string adress,string phoneNumber)
 		{
 			CurrentUser = new UserData
 			{
 				Id = userId,
 				FirstName = firstName,
 				LastName = lastName,
-				IsEmployee = isEmployee
+				IsEmployee = isEmployee,
+				Address = adress,
+				PhoneNumber = phoneNumber,
+				Email= email
 			};
 		}
 
