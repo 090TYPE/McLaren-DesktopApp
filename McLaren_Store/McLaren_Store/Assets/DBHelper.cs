@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using McLaren_Store.DataBase;
 using McLaren_Store.ViewModels;
+using static Syncfusion.Windows.Forms.TabBar;
 
 namespace McLaren_Store.Assets
 {
@@ -50,24 +53,42 @@ namespace McLaren_Store.Assets
 		}
 
 		// Метод для добавления нового клиента
-		public async Task<bool> RegisterCustomer(string userName, string password, string firstName, string lastName)
+		public async Task<bool> RegisterCustomer(string userName, string password, string firstName, string lastName, string phoneNumber, string email, string address)
 		{
-			if (!await IsUserNameAvailable(userName))
-				return false;
+			// Проверка на уникальность имени пользователя и email
+			if (_context.Customers.Any(c => c.UserName == userName || c.Email == email))
+			{
+				return false; // Имя пользователя или email уже существуют
+			}
 
-			var newCustomer = new Customers
+			// Валидация пароля и других полей
+			if (password.Length < 8 || !HasSpecialCharacter(password) || !HasUpperCase(password))
+			{
+				throw new ArgumentException("Пароль должен быть не менее 8 символов, содержать заглавные буквы и специальные символы.");
+			}
+
+			var customer = new Customers
 			{
 				UserName = userName,
 				Password = password,
 				FirstName = firstName,
-				LastName = lastName
+				LastName = lastName,
+				PhoneNumber = phoneNumber,
+				Email = email,
+				Address = address
 			};
 
-			_context.Customers.Add(newCustomer);
+			_context.Customers.Add(customer);
 			await _context.SaveChangesAsync();
-
 			return true;
 		}
+
+
+
+
+		private bool HasSpecialCharacter(string input) => input.Any(ch => !char.IsLetterOrDigit(ch));
+		private bool HasUpperCase(string input) => input.Any(char.IsUpper);
+
 
 		public async Task<(UserType userType, int userId, string firstName, string lastName)> AuthenticateUser(string userName, string password)
 		{

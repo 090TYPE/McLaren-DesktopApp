@@ -1,6 +1,8 @@
 ﻿using McLaren_Store.Assets;
 using System;
+using System.Net;
 using System.Windows;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace McLaren_Store.Forms
 {
@@ -35,16 +37,26 @@ namespace McLaren_Store.Forms
 			string password = PasswordBox1.Password;
 			string firstName = FirstNameTextBox.Text;
 			string lastName = LastNameTextBox.Text;
+			string phoneNumber = PhoneNumberTextBox.Text;
+			string email = EmailTextBox.Text;
+			string address = AddressTextBox.Text;
 
-			bool success = await dbHelper.RegisterCustomer(userName, password, firstName, lastName);
-
-			if (success)
+			try
 			{
-				MessageBox.Show("Регистрация прошла успешно!");
+				bool success = await dbHelper.RegisterCustomer(userName, password, firstName, lastName, phoneNumber, email, address);
+
+				if (success)
+				{
+					MessageBox.Show("Регистрация прошла успешно!");
+				}
+				else
+				{
+					MessageBox.Show("Ошибка: логин или email уже существует.");
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				MessageBox.Show("Ошибка: логин уже существует или произошла другая ошибка.");
+				MessageBox.Show($"Ошибка: {ex.Message}");
 			}
 		}
 
