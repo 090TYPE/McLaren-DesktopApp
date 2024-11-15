@@ -1,89 +1,102 @@
-﻿using McLaren_Store.Assets;
-using McLaren_Store.DataBase;
-using Microsoft.Win32;
+﻿using LiveCharts;
+using LiveCharts.Wpf;
+using McLaren_Store.Assets;
 using System;
-using System.IO;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 
 namespace McLaren_Store.Forms
 {
 	public partial class AdminPanel : Window
 	{
-		private byte[] _carImage; // To store the image data
+		public SeriesCollection SalesSeries { get; set; }
+		public List<string> Dates { get; set; }
+		public Func<double, string> Formatter { get; set; }
+		private AddCar _addcarWindow;
+		private Report _reportWindow;
+		private ViewData _viewdataWindow;
 
 		public AdminPanel()
 		{
 			InitializeComponent();
+			LoadSalesData();
+			
 		}
 
-		private void LoadImage_Click(object sender, RoutedEventArgs e)
+		private async void LoadSalesData()
 		{
-			var openFileDialog = new OpenFileDialog
-			{
-				Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp",
-				Title = "Выберите изображение для машины"
-			};
+			var salesData = await DBHelper.Instance.GetDailySalesStatisticsAsync();
 
-			if (openFileDialog.ShowDialog() == true)
+			if (salesData == null || !salesData.Any())
 			{
-				// Load the image and display the file name
-				_carImage = File.ReadAllBytes(openFileDialog.FileName);
-				ImageFileNameTextBlock.Text = System.IO.Path.GetFileName(openFileDialog.FileName);
-			}
-		}
-
-		private async void AddCar_Click(object sender, RoutedEventArgs e)
-		{
-			// Validate inputs
-			if (string.IsNullOrWhiteSpace(ModelTextBox.Text) ||
-				string.IsNullOrWhiteSpace(YearTextBox.Text) ||
-				string.IsNullOrWhiteSpace(ColorTextBox.Text) ||
-				string.IsNullOrWhiteSpace(PriceTextBox.Text) ||
-				string.IsNullOrWhiteSpace(EngineTypeTextBox.Text) ||
-				string.IsNullOrWhiteSpace(TransmissionTextBox.Text) ||
-				_carImage == null) // Ensure an image is selected
-			{
-				MessageBox.Show("Пожалуйста, заполните все поля и выберите изображение.");
+				MessageBox.Show("Нет данных для отображения.");
 				return;
 			}
 
-			var newCar = new McLaren_Store.DataBase.Cars
+			Dates = salesData.Select(data => data.Date.ToString("dd.MM")).ToList();
+			SalesSeries = new SeriesCollection
 			{
-				Model = ModelTextBox.Text,
-				Year = int.TryParse(YearTextBox.Text, out int year) ? year : (int?)null,
-				Color = ColorTextBox.Text,
-				Price = decimal.TryParse(PriceTextBox.Text, out decimal price) ? price : (decimal?)null,
-				EngineType = EngineTypeTextBox.Text,
-				Transmission = TransmissionTextBox.Text,
-				Available = AvailableCheckBox.IsChecked,
-				Image = _carImage
+				new LineSeries
+				{
+					Title = "Продажи",
+					Values = new ChartValues<int>(salesData.Select(data => data.SalesCount))
+				}
 			};
 
-			// Use DBHelper to add the car
-			try
+			Formatter = value => value.ToString("N");
+
+			// Обновляем DataContext и уведомляем об изменениях
+			DataContext = null;
+			DataContext = this;
+		}
+
+
+		public void AddCar_Click(object sender, EventArgs e)
+		{
+			if (_addcarWindow == null || !_addcarWindow.IsVisible)
 			{
-				await DBHelper.Instance.AddCarAsync(newCar);
-				MessageBox.Show("Машина добавлена успешно!");
-				ClearFields();
+				_addcarWindow = new AddCar();
+				_addcarWindow.Closed += (s, args) => _addcarWindow = null;
+				_addcarWindow.Show();
 			}
-			catch (Exception ex)
+			else
 			{
-				MessageBox.Show($"Ошибка при добавлении машины: {ex.Message}");
+				_addcarWindow.Activate();
 			}
 		}
 
-		private void ClearFields()
+		public void Report_Click(object sender, EventArgs e)
 		{
-			ModelTextBox.Clear();
-			YearTextBox.Clear();
-			ColorTextBox.Clear();
-			PriceTextBox.Clear();
-			EngineTypeTextBox.Clear();
-			TransmissionTextBox.Clear();
-			AvailableCheckBox.IsChecked = false;
-			_carImage = null;
-			ImageFileNameTextBlock.Text = string.Empty;
+			if (_reportWindow == null || !_reportWindow.IsVisible)
+			{
+				_reportWindow = new Report();
+				_reportWindow.Closed += (s, args) => _reportWindow = null;
+				_reportWindow.Show();
+			}
+			else
+			{
+				_reportWindow.Activate();
+			}
+		}
+
+		public void Database_Click(object sender, EventArgs e)
+		{
+			if (_viewdataWindow == null || !_viewdataWindow.IsVisible)
+			{
+				_viewdataWindow = new ViewData();
+				_viewdataWindow.Closed += (s, args) => _viewdataWindow = null;
+				_viewdataWindow.Show();
+			}
+			else
+			{
+				_viewdataWindow.Activate();
+			}
+		}
+
+		private void MinimizeWindow_Click(object sender, RoutedEventArgs e)
+		{
+			this.WindowState = WindowState.Minimized;
 		}
 
 		private void CloseWindow_Click(object sender, RoutedEventArgs e)

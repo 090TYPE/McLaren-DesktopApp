@@ -163,18 +163,38 @@ namespace McLaren_Store.Assets
 			await _context.SaveChangesAsync();
 		}
 
+		public async Task<List<DailySalesStatistics>> GetDailySalesStatisticsAsync()
+		{
+			var salesData = await _context.Sales
+				.Where(sale => sale.SaleDate.HasValue) // Учитываем только записи с не-null датой
+				.GroupBy(sale => DbFunctions.TruncateTime(sale.SaleDate)) // TruncateTime обрезает время
+				.Select(group => new DailySalesStatistics
+				{
+					Date = group.Key.Value, // Используем обрезанную дату (без времени)
+					SalesCount = group.Count()
+				})
+				.ToListAsync();
 
+			return salesData;
+		}
+
+
+		public class DailySalesStatistics
+		{
+			public DateTime Date { get; set; } // Дата продажи
+			public int SalesCount { get; set; } // Общая сумма продаж за день
+		}
 
 		public async Task AddSaleAsync(int carId, int customerId, decimal? salePrice)
 		{
-			if (salePrice.HasValue) // Проверяем, есть ли значение
+			if (salePrice.HasValue)
 			{
 				var sale = new Sales
 				{
 					CarID = carId,
 					CustomerID = customerId,
 					SaleDate = DateTime.Now,
-					SalePrice = salePrice.Value // Используем значение
+					SalePrice = salePrice.Value 
 				};
 
 				_context.Sales.Add(sale);
@@ -190,5 +210,60 @@ namespace McLaren_Store.Assets
 		{
 			return await Task.Run(() => _context.Customers.FirstOrDefault(c => c.UserName == userName));
 		}
+
+		public async Task<List<Customers>> GetAllCustomersAsync()
+		{
+			return await _context.Customers.ToListAsync();
+		}
+
+		public async Task<List<Sales>> GetAllSalesAsync()
+		{
+			return await _context.Sales.ToListAsync();
+		}
+
+		public async Task<List<Employees>> GetAllEmployeesAsync()
+		{
+			return await _context.Employees.ToListAsync();
+		}
+		public async Task<List<Roles>> GetAllRolesAsync()
+		{
+			return await _context.Roles.ToListAsync();
+		}
+		public async Task<List<Cars>> GetAllCarsDBAsync()
+		{
+			return await _context.Cars.ToListAsync();
+		}
+
+		public async Task SaveChangesAsync()
+		{
+			// Обновите состояние изменённых и добавленных объектов
+			foreach (var entry in _context.ChangeTracker.Entries().Where(e => e.State == EntityState.Added || e.State == EntityState.Modified))
+			{
+				_context.Entry(entry.Entity).State = entry.State;
+			}
+
+			await _context.SaveChangesAsync();
+		}
+
+		public async Task<List<SalesViewModel>> GetAllSalesDataAsync()
+		{
+			return await _context.Sales
+				.Include(s => s.Cars)
+				.Select(sale => new SalesViewModel
+				{
+					SaleDate = sale.SaleDate,
+					Model = sale.Cars.Model,
+					Price = sale.Cars.Price
+				})
+				.ToListAsync();
+		}
+
+		public class SalesViewModel
+		{
+			public DateTime? SaleDate { get; set; }
+			public string Model { get; set; }
+			public decimal? Price { get; set; }
+		}
+
 	}
 }

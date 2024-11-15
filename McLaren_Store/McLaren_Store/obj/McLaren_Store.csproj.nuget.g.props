@@ -23,6 +23,7 @@
     <PkgMicrosoft_Xaml_Behaviors_Wpf Condition=" '$(PkgMicrosoft_Xaml_Behaviors_Wpf)' == '' ">C:\Users\090TYPE\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.77</PkgMicrosoft_Xaml_Behaviors_Wpf>
     <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\090TYPE\.nuget\packages\materialdesignthemes\5.1.1-ci794</PkgMaterialDesignThemes>
     <PkgMahApps_Metro Condition=" '$(PkgMahApps_Metro)' == '' ">C:\Users\090TYPE\.nuget\packages\mahapps.metro\3.0.0-alpha0513</PkgMahApps_Metro>
+    <PkgLiveCharts_Wpf Condition=" '$(PkgLiveCharts_Wpf)' == '' ">C:\Users\090TYPE\.nuget\packages\livecharts.wpf\0.9.7</PkgLiveCharts_Wpf>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\090TYPE\.nuget\packages\entityframework\6.5.1</PkgEntityFramework>
   </PropertyGroup>
 </Project>

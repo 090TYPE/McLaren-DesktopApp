@@ -43,6 +43,10 @@
       "frameworks": {
         "net472": {
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.104.2, )"
+            },
             "DialogBoxForMaterialDesignToolkitInXaml": {
               "target": "Package",
               "version": "[1.0.0, )"
@@ -54,6 +58,10 @@
             "EntityFramework.ru": {
               "target": "Package",
               "version": "[6.2.0, )"
+            },
+            "LiveCharts.Wpf": {
+              "target": "Package",
+              "version": "[0.9.7, )"
             },
             "MahApps.Metro": {
               "target": "Package",
