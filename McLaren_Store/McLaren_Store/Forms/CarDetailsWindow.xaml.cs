@@ -37,8 +37,23 @@ namespace McLaren_Store.Forms
 
 				if (car != null)
 				{
-					await DBHelper.Instance.AddSaleAsync(car.CarID, customerId, car.Price);
-					MessageBox.Show("Автомобиль успешно куплен!");
+					if (car.Available == false)
+					{
+						MessageBox.Show("Этот автомобиль уже продан и недоступен для покупки.");
+						return; // Прерываем выполнение, если автомобиль недоступен
+					}
+
+					try
+					{
+						await DBHelper.Instance.AddSaleAsync(car.CarID, customerId, car.Price);
+						car.Available = false; // Локально обновляем состояние
+						MessageBox.Show("Автомобиль успешно куплен!");
+						this.Close(); // Закрываем окно после покупки
+					}
+					catch (Exception ex)
+					{
+						MessageBox.Show($"Ошибка при покупке автомобиля: {ex.Message}");
+					}
 				}
 			}
 			else

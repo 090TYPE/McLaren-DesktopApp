@@ -152,3 +152,4 @@ C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\Microsoft.Bcl.HashCode.dll
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\RBush.dll
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\SixLabors.Fonts.dll
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\GeneratedInternalTypeHelper.g.cs

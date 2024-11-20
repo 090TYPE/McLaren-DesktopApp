@@ -77,6 +77,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Assets\BoolToColorConverter.cs" />
+    <Compile Include="Assets\BoolToTextConverter.cs" />
     <Compile Include="Forms\AddCar.xaml.cs">
       <DependentUpon>AddCar.xaml</DependentUpon>
     </Compile>

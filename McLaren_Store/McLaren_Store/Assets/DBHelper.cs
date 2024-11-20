@@ -137,7 +137,7 @@ namespace McLaren_Store.Assets
 				})
 				.ToListAsync();
 
-			// Format the SaleDate after retrieving data from the database
+
 			return orders.Select(o => new Order
 			{
 				OrderDate = o.SaleDate.HasValue ? o.SaleDate.Value.ToString("dd/MM/yyyy") : "N/A",
@@ -148,13 +148,17 @@ namespace McLaren_Store.Assets
 
 		public async Task<List<CarViewModel>> GetAllCarsAsync()
 		{
-			return await _context.Cars.Select(car => new CarViewModel
+			return await _context.Cars
+			.Where(car => car.Available == true) // Проверяем только доступные машины
+			.Select(car => new CarViewModel
 			{
 				CarID = car.CarID,
 				Model = car.Model,
 				Price = car.Price,
-				Image = car.Image 
-			}).ToListAsync();
+				Image = car.Image,
+				Available = car.Available
+			})
+			.ToListAsync();
 		}
 
 		public async Task AddCarAsync(Cars car)
@@ -189,20 +193,34 @@ namespace McLaren_Store.Assets
 		{
 			if (salePrice.HasValue)
 			{
+				// Найти автомобиль по ID
+				var car = await _context.Cars.FirstOrDefaultAsync(c => c.CarID == carId);
+				if (car == null)
+				{
+					throw new ArgumentException("Автомобиль с указанным ID не найден");
+				}
+
+				// Создание новой записи о продаже
 				var sale = new Sales
 				{
 					CarID = carId,
 					CustomerID = customerId,
 					SaleDate = DateTime.Now,
-					SalePrice = salePrice.Value 
+					SalePrice = salePrice.Value
 				};
 
+				// Добавление записи о продаже
 				_context.Sales.Add(sale);
+
+				// Обновление статуса доступности автомобиля
+				car.Available = false;
+
+				// Сохранение изменений
 				await _context.SaveChangesAsync();
 			}
 			else
 			{
-				throw new ArgumentException("Sale price cannot be null");
+				throw new ArgumentException("Цена продажи не может быть null");
 			}
 		}
 		// Пример: метод для получения клиента по имени пользователя

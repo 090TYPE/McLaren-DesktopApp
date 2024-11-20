@@ -8,26 +8,66 @@
         Background="Transparent">
 
     <Window.Resources>
+        <!-- Стиль для заголовков колонок -->
+        <Style TargetType="GridViewColumnHeader">
+            <Setter Property="Foreground" Value="#FFFFFF" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Background" Value="#333333"/>
+            <Setter Property="Height" Value="40"/>
+        </Style>
+
+        <!-- Стиль для строк в ListView -->
+        <Style TargetType="ListViewItem">
+            <Setter Property="Background" Value="#212121"/>
+            <Setter Property="Foreground" Value="#F5F5F5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Height" Value="40"/>
+            <Style.Triggers>
+                <!-- Изменение фона при наведении -->
+                <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="True">
+                    <Setter Property="Background" Value="#4D4D4D"/>
+                </DataTrigger>
+                <!-- Изменение фона для выбранного элемента -->
+                <DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="True">
+                    <Setter Property="Background" Value="#3E3E3E"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Стиль для ListView -->
+        <Style TargetType="ListView">
+            <Setter Property="Background" Value="#212121"/>
+            <Setter Property="Foreground" Value="#F5F5F5"/>
+            <Setter Property="BorderBrush" Value="#333333"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Height" Value="300"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
         <!-- Button Style -->
         <Style TargetType="Button">
-            <Setter Property="Foreground" Value="#F5F5F5" />
-            <Setter Property="Background" Value="#212121" />
+            <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}" />
+            <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
             <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="Padding" Value="5" />
+            <Setter Property="Padding" Value="10,5" />
             <Setter Property="Margin" Value="5" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                CornerRadius="10"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                BorderThickness="0">
+                        <Border Background="{TemplateBinding Background}" 
+                    CornerRadius="15"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
+
     </Window.Resources>
 
     <Border Background="{StaticResource PrimaryBrush}" CornerRadius="15" Padding="10">
@@ -39,45 +79,85 @@
             </StackPanel>
 
             <!-- Main layout -->
-            <StackPanel Orientation="Vertical" Margin="20,50,20,20">
-                <TextBlock Text="Личный Кабинет" FontSize="24" FontWeight="Bold" 
-                           Foreground="{StaticResource SecondaryBrush}" HorizontalAlignment="Center" Margin="0,0,0,20" />
+            <Grid Margin="20,50,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <!-- Заголовок -->
+                    <RowDefinition Height="*" />
+                    <!-- Основное содержимое -->
+                </Grid.RowDefinitions>
 
-                <!-- User information section -->
-                <StackPanel Orientation="Vertical" Margin="0,0,0,20">
-                    <TextBlock Text="Имя:" Foreground="{StaticResource SecondaryBrush}" />
-                    <TextBlock Text="{Binding Path=CurrentUser.FirstName}" Foreground="{StaticResource SecondaryBrush}" />
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <!-- Левая колонка для данных пользователя -->
+                    <ColumnDefinition Width="2*"/>
+                    <!-- Правая колонка для списка заказов -->
+                </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="Фамилия:" Foreground="{StaticResource SecondaryBrush}" />
-                    <TextBlock Text="{Binding Path=CurrentUser.LastName}" Foreground="{StaticResource SecondaryBrush}" />
+                <!-- Левый блок с информацией о пользователе -->
+                <StackPanel Grid.Row="1" Grid.Column="0" Margin="0,0,20,0">
+                    <TextBlock Text="Личный Кабинет" FontSize="24" FontWeight="Bold" 
+                               Foreground="{StaticResource SecondaryBrush}" HorizontalAlignment="Center" Margin="0,0,0,20" />
 
-                    <TextBlock Text="Номер телефона:" Foreground="{StaticResource SecondaryBrush}" />
-                    <TextBlock Text="{Binding Path=CurrentUser.PhoneNumber}" Foreground="{StaticResource SecondaryBrush}" />
+                    <!-- User information section -->
+                    <StackPanel Orientation="Vertical" Margin="0,0,0,20">
+                        <TextBlock Text="Имя:" Foreground="{StaticResource SecondaryBrush}" />
+                        <TextBlock Text="{Binding Path=CurrentUser.FirstName}" Foreground="{StaticResource SecondaryBrush}" />
 
-                    <TextBlock Text="Email:" Foreground="{StaticResource SecondaryBrush}" />
-                    <TextBlock Text="{Binding Path=CurrentUser.Email}" Foreground="{StaticResource SecondaryBrush}" />
+                        <TextBlock Text="Фамилия:" Foreground="{StaticResource SecondaryBrush}" />
+                        <TextBlock Text="{Binding Path=CurrentUser.LastName}" Foreground="{StaticResource SecondaryBrush}" />
 
-                    <TextBlock Text="Адрес:" Foreground="{StaticResource SecondaryBrush}" />
-                    <TextBlock Text="{Binding Path=CurrentUser.Address}" Foreground="{StaticResource SecondaryBrush}" />
+                        <TextBlock Text="Номер телефона:" Foreground="{StaticResource SecondaryBrush}" />
+                        <TextBlock Text="{Binding Path=CurrentUser.PhoneNumber}" Foreground="{StaticResource SecondaryBrush}" />
+
+                        <TextBlock Text="Email:" Foreground="{StaticResource SecondaryBrush}" />
+                        <TextBlock Text="{Binding Path=CurrentUser.Email}" Foreground="{StaticResource SecondaryBrush}" />
+
+                        <TextBlock Text="Адрес:" Foreground="{StaticResource SecondaryBrush}" />
+                        <TextBlock Text="{Binding Path=CurrentUser.Address}" Foreground="{StaticResource SecondaryBrush}" />
+                    </StackPanel>
+
+                    <!-- Button to return to main menu -->
+                    <Button Content="Назад в меню" Height="40" Width="150" HorizontalAlignment="Center" 
+                            Click="BackToMenu_Click" Margin="0,20,0,0" />
                 </StackPanel>
 
-                <!-- Orders section -->
-                <TextBlock Text="История заказов" FontSize="18" FontWeight="Bold" 
-                           Foreground="{StaticResource SecondaryBrush}" Margin="0,0,0,10"/>
-                <ListView Name="OrdersListView" Background="{StaticResource PrimaryBrush}" Foreground="{StaticResource SecondaryBrush}" BorderThickness="0">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn Header="Order Date" Width="120" DisplayMemberBinding="{Binding OrderDate}" />
-                            <GridViewColumn Header="Model" Width="200" DisplayMemberBinding="{Binding Model}" />
-                            <GridViewColumn Header="Price" Width="100" DisplayMemberBinding="{Binding Price}" />
-                        </GridView>
-                    </ListView.View>
-                </ListView>
+                <!-- Правая колонка с историей заказов -->
+                <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,0,0">
+                    <TextBlock Text="История заказов" FontSize="18" FontWeight="Bold" 
+                               Foreground="{StaticResource SecondaryBrush}" Margin="0,0,0,10"/>
 
-                <!-- Button to return to main menu -->
-                <Button Content="Назад в меню" Height="40" Width="150" HorizontalAlignment="Center" 
-                        Click="BackToMenu_Click" Margin="0,20,0,0" />
-            </StackPanel>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                        <ListView Name="OrdersListView" Background="{StaticResource PrimaryBrush}" Foreground="#FFFFFF" BorderThickness="0">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Order Date" Width="120" DisplayMemberBinding="{Binding OrderDate}">
+                                    <GridViewColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding}" Foreground="#FFFFFF" FontWeight="Bold"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.HeaderTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Model" Width="200" DisplayMemberBinding="{Binding Model}">
+                                    <GridViewColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding}" Foreground="#FFFFFF" FontWeight="Bold"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.HeaderTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Price" Width="100" DisplayMemberBinding="{Binding Price}">
+                                    <GridViewColumn.HeaderTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding}" Foreground="#FFFFFF" FontWeight="Bold"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.HeaderTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    </ScrollViewer>
+                </StackPanel>
+            </Grid>
         </Grid>
     </Border>
 </Window>
