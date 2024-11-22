@@ -153,3 +153,5 @@ C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\RBush.dll
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\bin\Debug\SixLabors.Fonts.dll
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\ToLearnMore.baml
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\ToLearnMore.g.cs

@@ -4,6 +4,7 @@
         Title="Personal Account"
         Height="450" Width="800"
         WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="Transparent">
 

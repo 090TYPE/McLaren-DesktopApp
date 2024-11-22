@@ -5,6 +5,7 @@
     xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
     Title="Admin Panel"
     Width="800"
+    WindowStartupLocation="CenterScreen"
     Height="450"
     WindowStyle="None"
     AllowsTransparency="True"

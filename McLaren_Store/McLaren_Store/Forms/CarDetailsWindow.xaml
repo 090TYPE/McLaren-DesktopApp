@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
         xmlns:assets="clr-namespace:McLaren_Store.Assets"
         Title="Детали автомобиля" Height="678" Width="827"
+        WindowStartupLocation="CenterScreen"
         WindowStyle="None" AllowsTransparency="True" Background="Transparent">
 
     <Window.Resources>

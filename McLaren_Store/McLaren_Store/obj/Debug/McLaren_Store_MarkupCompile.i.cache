@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\App.xaml
-101404199903
+11-651095836
 2-454137651
-28-2144217479
+292099951132
 68-15250207
-Forms\AddCar.xaml;Forms\AdminPanel.xaml;Forms\Authorization.xaml;Forms\CarDetailsWindow.xaml;Forms\CarsWindow.xaml;Forms\MainForm.xaml;Forms\PersonalAccount.xaml;Forms\Registrations.xaml;Forms\Report.xaml;Forms\ViewData.xaml;
+Forms\AddCar.xaml;Forms\AdminPanel.xaml;Forms\Authorization.xaml;Forms\CarDetailsWindow.xaml;Forms\CarsWindow.xaml;Forms\MainForm.xaml;Forms\PersonalAccount.xaml;Forms\Registrations.xaml;Forms\Report.xaml;Forms\ToLearnMore.xaml;Forms\ViewData.xaml;
 
-True
+False
 

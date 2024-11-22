@@ -4,6 +4,7 @@
         WindowStyle="None"
         Title="Registrations"
         Height="645" Width="400"
+        WindowStartupLocation="CenterScreen"
         AllowsTransparency="True"
         Background="Transparent">
     <Window.Resources>

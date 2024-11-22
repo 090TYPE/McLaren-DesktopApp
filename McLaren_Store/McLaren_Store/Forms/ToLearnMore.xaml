@@ -1,0 +1,96 @@
+﻿<Window x:Class="McLaren_Store.Forms.ToLearnMore"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Узнать больше о компании" 
+        Height="600" Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+
+    <Window.Resources>
+        <!-- Основные цвета -->
+        <Color x:Key="PrimaryColor">#212121</Color>
+        <Color x:Key="SecondaryColor">#F5F5F5</Color>
+        <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
+        <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryColor}" />
+
+        <!-- Стиль для кнопок -->
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}" />
+            <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="10,5" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="15"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Border Background="{StaticResource PrimaryBrush}" CornerRadius="15" Padding="10">
+        <Grid>
+            <!-- Верхний правый угол с кнопками управления -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0">
+                <Button Content="—" Width="40" Height="40" Click="MinimizeWindow_Click" />
+                <Button Content="✖" Width="40" Height="40" Click="CloseWindow_Click" />
+            </StackPanel>
+
+            <!-- Основной контент с прокруткой -->
+            <ScrollViewer Margin="10,50,10,10" VerticalScrollBarVisibility="Auto">
+                <StackPanel Orientation="Vertical">
+                    <!-- Заголовок -->
+                    <TextBlock Text="О компании McLaren" FontSize="24" FontWeight="Bold" 
+                   Foreground="{StaticResource SecondaryBrush}" HorizontalAlignment="Center" Margin="0,0,0,20" />
+
+                    <!-- Первый блок с изображением и текстом -->
+                    <Grid Margin="0,0,0,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="3*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="pack://application:,,,/Resources/044.jpg" Grid.Column="0" Margin="10"
+                   MaxHeight="150" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+                        <TextBlock Text="McLaren – это легендарный бренд, известный своим инновационным подходом в автомобильной промышленности и невероятными достижениями в мире автоспорта. 
+                              Компания была основана в 1963 году Брюсом Маклареном и с тех пор занимает лидирующие позиции в разработке суперкаров."
+                       Grid.Column="1" Foreground="{StaticResource SecondaryBrush}" TextWrapping="Wrap" Margin="10" FontSize="16" />
+                    </Grid>
+
+                    <!-- Второй блок с текстом -->
+                    <TextBlock Text="McLaren активно развивает технологии будущего, которые находят применение как в гоночных болидах Формулы 1, так и в серийных автомобилях. 
+                          Каждый автомобиль McLaren – это произведение искусства, сочетающее в себе высокую производительность, изысканный стиль и передовые технологии."
+                   Foreground="{StaticResource SecondaryBrush}" TextWrapping="Wrap" Margin="10,0,10,20" FontSize="16" />
+
+                    <!-- Второе изображение -->
+                    <Image Source="pack://application:,,,/Resources/1570637024_85_52.jpg" Margin="10,0,10,20" MaxHeight="300" Stretch="Uniform" />
+
+                    <!-- Третий блок текста -->
+                    <TextBlock Text="Автомобили McLaren созданы для истинных ценителей скорости и эстетики. 
+                          Производство каждого автомобиля осуществляется вручную с использованием высококачественных материалов. 
+                          Компания гордится тем, что предлагает клиентам не просто автомобили, а уникальный опыт и неповторимые эмоции."
+                   Foreground="{StaticResource SecondaryBrush}" TextWrapping="Wrap" Margin="10,0,10,20" FontSize="16" />
+
+                    <!-- Третье изображение -->
+                    <Image Source="pack://application:,,,/Resources/6f22b6as-960.jpg" Margin="10,0,10,20" MaxHeight="300" Stretch="Uniform" />
+
+                    <!-- Завершающий текст -->
+                    <TextBlock Text="McLaren всегда стремится к совершенству. Станьте частью этого легендарного пути и узнайте, что значит быть частью семьи McLaren."
+                   Foreground="{StaticResource SecondaryBrush}" TextWrapping="Wrap" Margin="10,0,10,20" FontSize="16" />
+                    <Button Grid.Row="1" Content="Назад" Width="100" Height="40" 
+                        HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" 
+                        Click="BackToMainForm_Click" />
+                </StackPanel>
+            </ScrollViewer>
+
+        </Grid>
+    </Border>
+</Window>

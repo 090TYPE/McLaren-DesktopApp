@@ -88,6 +88,9 @@
     <Compile Include="Forms\Report.xaml.cs">
       <DependentUpon>Report.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ToLearnMore.xaml.cs">
+      <DependentUpon>ToLearnMore.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ViewData.xaml.cs">
       <DependentUpon>ViewData.xaml</DependentUpon>
     </Compile>
@@ -276,6 +279,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\ToLearnMore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\ViewData.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -292,6 +299,9 @@
       <DependentUpon>McLarenDB.edmx</DependentUpon>
       <LastGenOutput>McLarenDB.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\044.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="IT_MUST_BE_DONE.txt" />
     <Resource Include="Resources\2015 McLaren P1 036.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

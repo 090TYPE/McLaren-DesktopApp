@@ -24,6 +24,7 @@ namespace McLaren_Store.Forms
 		private Authorization _authorizationWindow;
 		private PersonalAccount _personalAccountWindow;
 		private CarsWindow _cars;
+		private ToLearnMore _learnMore;
 
 		public MainForm()
 		{
@@ -62,6 +63,24 @@ namespace McLaren_Store.Forms
 			{
 				OpenPersonalAccount(); // Открываем личный кабинет, если пользователь авторизован
 			}
+		}
+		private void LearnMore_Click(object sender, RoutedEventArgs e)
+		{
+			// Проверяем, есть ли активный пользователь в UserSession
+			
+				if (_learnMore == null || !_learnMore.IsVisible)
+				{
+					_learnMore = new ToLearnMore();
+					_learnMore.Closed += (s, args) => _learnMore = null;
+					_learnMore.Show();
+					this.Close();
+				}
+				else
+				{
+					_learnMore.Activate();
+				}
+			
+
 		}
 
 		private void OpenPersonalAccount()

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:McLaren_Store.Forms"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="AddCar" Height="581" Width="601"
             WindowStyle="None"
     AllowsTransparency="True"
