@@ -45,7 +45,7 @@
             <!-- Верхняя панель навигации с фиксированными кнопками -->
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="{StaticResource PrimaryBrush}">
                 <Button Width="100" Height="40" Background="Transparent" BorderThickness="0">
-                    <Image Source="pack://application:,,,/Resources/McLaren-Logo-PNG-File.png" Stretch="Uniform" />
+                    <TextBlock Background="{StaticResource PrimaryBrush}" Text="ЦИФРА&#x0a; ОДИН"/>
                 </Button>
                 <Button Content="Купить" Width="100" Click="Buy_Click" >
                     <Button.Triggers>

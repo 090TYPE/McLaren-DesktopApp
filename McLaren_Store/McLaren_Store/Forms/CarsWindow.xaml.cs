@@ -24,7 +24,7 @@ namespace McLaren_Store.Forms
 		private async void LoadCarsAsync()
 		{
 			var cars = await DBHelper.Instance.GetAllCarsAsync();
-			CarsItemsControl.ItemsSource = cars; // Обновлено с CarsListView на CarsItemsControl
+			CarsItemsControl.ItemsSource = cars;
 		}
 
 
