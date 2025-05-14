@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище McLaren_StoreModelContainer" CdmEntityContainer="McLaren_StoreEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище McLaren_StoreModelContainer" CdmEntityContainer="McLaren_StoreEntities1">
     <EntitySetMapping Name="Cars">
       <EntityTypeMapping TypeName="McLaren_StoreModel.Cars">
         <MappingFragment StoreEntitySet="Cars">
@@ -13,6 +13,7 @@
           <ScalarProperty Name="Transmission" ColumnName="Transmission" />
           <ScalarProperty Name="Available" ColumnName="Available" />
           <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

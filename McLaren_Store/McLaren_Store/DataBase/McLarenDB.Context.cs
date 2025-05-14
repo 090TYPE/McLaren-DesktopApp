@@ -13,10 +13,10 @@ namespace McLaren_Store.DataBase
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class McLaren_StoreEntities : DbContext
+    public partial class McLaren_StoreEntities1 : DbContext
     {
-        public McLaren_StoreEntities()
-            : base("name=McLaren_StoreEntities")
+        public McLaren_StoreEntities1()
+            : base("name=McLaren_StoreEntities1")
         {
         }
     

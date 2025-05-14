@@ -17,7 +17,7 @@ namespace McLaren_Store.Assets
 	{
 
 		private static DBHelper _instance; // Экземпляр класса
-		private readonly McLaren_StoreEntities _context; // Контекст базы данных
+		private readonly McLaren_StoreEntities1 _context; // Контекст базы данных
 
 		// Синглтон для доступа к классу
 		public static DBHelper Instance
@@ -41,7 +41,7 @@ namespace McLaren_Store.Assets
 
 		private DBHelper()
 		{
-			_context = new McLaren_StoreEntities();
+			_context = new McLaren_StoreEntities1();
 		}
 
 		public async Task<bool> IsUserNameAvailable(string userName)
@@ -156,7 +156,11 @@ namespace McLaren_Store.Assets
 				Model = car.Model,
 				Price = car.Price,
 				Image = car.Image,
-				Available = car.Available
+				Available = car.Available,
+				Brand = car.Brand,
+				Transmission = car.Transmission,
+				EngineType = car.EngineType,
+				Color = car.Color
 			})
 			.ToListAsync();
 		}

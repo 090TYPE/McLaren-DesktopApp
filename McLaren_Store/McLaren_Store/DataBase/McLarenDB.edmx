@@ -18,6 +18,7 @@
           <Property Name="Transmission" Type="varchar" MaxLength="50" />
           <Property Name="Available" Type="bit" />
           <Property Name="Image" Type="varbinary(max)" />
+          <Property Name="Brand" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Customers">
           <Key>
@@ -153,6 +154,7 @@
           <Property Name="Transmission" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Available" Type="Boolean" />
           <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Sales" Relationship="Self.FK__Sales__CarID__52593CB8" FromRole="Cars" ToRole="Sales" />
         </EntityType>
         <EntityType Name="Customers">
@@ -255,7 +257,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="McLaren_StoreEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="McLaren_StoreEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cars" EntityType="Self.Cars" />
           <EntitySet Name="Customers" EntityType="Self.Customers" />
           <EntitySet Name="Employees" EntityType="Self.Employees" />
@@ -283,7 +285,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище McLaren_StoreModelContainer" CdmEntityContainer="McLaren_StoreEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище McLaren_StoreModelContainer" CdmEntityContainer="McLaren_StoreEntities1">
           <EntitySetMapping Name="Cars">
             <EntityTypeMapping TypeName="McLaren_StoreModel.Cars">
               <MappingFragment StoreEntitySet="Cars">
@@ -296,6 +298,7 @@
                 <ScalarProperty Name="Transmission" ColumnName="Transmission" />
                 <ScalarProperty Name="Available" ColumnName="Available" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

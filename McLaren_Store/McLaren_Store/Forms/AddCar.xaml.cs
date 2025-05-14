@@ -42,6 +42,7 @@ namespace McLaren_Store.Forms
 				string.IsNullOrWhiteSpace(PriceTextBox.Text) ||
 				string.IsNullOrWhiteSpace(EngineTypeTextBox.Text) ||
 				string.IsNullOrWhiteSpace(TransmissionTextBox.Text) ||
+				string.IsNullOrWhiteSpace(BrandTextBox.Text) ||
 				_carImage == null) // Ensure an image is selected
 			{
 				System.Windows.MessageBox.Show("Пожалуйста, заполните все поля и выберите изображение.");
@@ -56,6 +57,7 @@ namespace McLaren_Store.Forms
 				Price = decimal.TryParse(PriceTextBox.Text, out decimal price) ? price : (decimal?)null,
 				EngineType = EngineTypeTextBox.Text,
 				Transmission = TransmissionTextBox.Text,
+				Brand = BrandTextBox.Text,
 				Available = AvailableCheckBox.IsChecked,
 				Image = _carImage
 			};

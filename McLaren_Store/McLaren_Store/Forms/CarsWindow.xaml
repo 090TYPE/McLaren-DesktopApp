@@ -47,7 +47,19 @@
                     <Button Content="✖" Width="40" Click="CloseWindow_Click" />
                 </StackPanel>
             </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Left">
+                <TextBlock Text="Сортировка:" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
 
+                <ComboBox x:Name="SortComboBox" Width="220"
+              Background="{StaticResource PrimaryBrush}"
+              Foreground="White"
+              SelectionChanged="SortComboBox_SelectionChanged">
+                    <ComboBoxItem Content="Модель (A-Z)" />
+                    <ComboBoxItem Content="Модель (Z-A)" />
+                    <ComboBoxItem Content="Цена (по возрастанию)" />
+                    <ComboBoxItem Content="Цена (по убыванию)" />
+                </ComboBox>
+            </StackPanel>
             <!-- ScrollViewer для прокрутки -->
             <ScrollViewer VerticalScrollBarVisibility="Auto" Height="300">
                 <ItemsControl Name="CarsItemsControl" Background="Transparent" Foreground="Black" MouseDoubleClick="CarsItemsControl_MouseDoubleClick">
@@ -62,12 +74,14 @@
                                     Padding="5" Margin="5">
                                 <StackPanel>
                                     <Image Source="{Binding Image}" Stretch="UniformToFill" Height="120" Margin="0,0,0,5" />
+                                    <TextBlock Text="{Binding Brand}" FontWeight="Bold" FontSize="14" 
+                                                Margin="5,5,5,0" Foreground="Black" TextAlignment="Center"/>
                                     <TextBlock Text="{Binding Model}" FontWeight="Bold" FontSize="14" 
                                                Margin="5,5,5,0" Foreground="Black" TextAlignment="Center"/>
-                                    <TextBlock Text="{Binding Year}" Margin="5,0,5,5" Foreground="DarkGray" TextAlignment="Center"/>
-                                    <TextBlock Text="{Binding Price, StringFormat='{}{0:C}'}" 
+                                    <TextBlock Text="{Binding Price, StringFormat='{}{0} ₽'}"
                                                Margin="5,0,5,5" Foreground="Green" FontSize="16" FontWeight="Bold" 
                                                TextAlignment="Center"/>
+
                                 </StackPanel>
                                 <Border.Style>
                                     <Style TargetType="Border">

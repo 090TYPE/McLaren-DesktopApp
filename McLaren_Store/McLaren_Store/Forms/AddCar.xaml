@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:McLaren_Store.Forms"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="AddCar" Height="581" Width="601"
+        Title="AddCar" Height="630" Width="601"
             WindowStyle="None"
     AllowsTransparency="True"
     Background="Transparent">
@@ -63,6 +63,9 @@
 
             <TextBlock Text="Трансмиссия:"  Foreground="{StaticResource SecondaryBrush}"/>
             <TextBox x:Name="TransmissionTextBox" Margin="0,0,0,10" />
+
+            <TextBlock Text="Бренд:"  Foreground="{StaticResource SecondaryBrush}"/>
+            <TextBox x:Name="BrandTextBox" Margin="0,0,0,10" />
 
             <TextBlock Text="Доступность:"  Foreground="{StaticResource SecondaryBrush}"/>
             <CheckBox x:Name="AvailableCheckBox" Margin="0,0,0,10" />

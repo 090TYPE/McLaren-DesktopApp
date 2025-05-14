@@ -2,6 +2,7 @@
 using McLaren_Store.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -15,6 +16,7 @@ namespace McLaren_Store.Forms
 	/// </summary>
 	public partial class CarsWindow : Window
 	{
+		private List<CarViewModel> allCars;
 		public CarsWindow()
 		{
 			InitializeComponent();
@@ -23,10 +25,34 @@ namespace McLaren_Store.Forms
 
 		private async void LoadCarsAsync()
 		{
-			var cars = await DBHelper.Instance.GetAllCarsAsync();
-			CarsItemsControl.ItemsSource = cars;
+			allCars = await DBHelper.Instance.GetAllCarsAsync();
+			CarsItemsControl.ItemsSource = allCars;
 		}
+		private void SortComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			if (allCars == null || SortComboBox.SelectedIndex < 0)
+				return;
 
+			List<CarViewModel> sortedCars = allCars;
+
+			switch (SortComboBox.SelectedIndex)
+			{
+				case 0: // Модель (A-Z)
+					sortedCars = allCars.OrderBy(c => c.Model).ToList();
+					break;
+				case 1: // Модель (Z-A)
+					sortedCars = allCars.OrderByDescending(c => c.Model).ToList();
+					break;
+				case 2: // Цена (по возрастанию)
+					sortedCars = allCars.OrderBy(c => c.Price).ToList();
+					break;
+				case 3: // Цена (по убыванию)
+					sortedCars = allCars.OrderByDescending(c => c.Price).ToList();
+					break;
+			}
+
+			CarsItemsControl.ItemsSource = sortedCars;
+		}
 
 		private void CarsItemsControl_MouseDoubleClick(object sender, MouseButtonEventArgs e)
 		{

@@ -79,26 +79,6 @@
     </Compile>
     <Compile Include="Assets\BoolToColorConverter.cs" />
     <Compile Include="Assets\BoolToTextConverter.cs" />
-    <Compile Include="Forms\AddCar.xaml.cs">
-      <DependentUpon>AddCar.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CarDetailsWindow.xaml.cs">
-      <DependentUpon>CarDetailsWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Report.xaml.cs">
-      <DependentUpon>Report.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ToLearnMore.xaml.cs">
-      <DependentUpon>ToLearnMore.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ViewData.xaml.cs">
-      <DependentUpon>ViewData.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModels\CarViewModel.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\DBHelper.cs" />
-    <Compile Include="Assets\UserSession.cs" />
     <Compile Include="DataBase\Cars.cs">
       <DependentUpon>McLarenDB.tt</DependentUpon>
     </Compile>
@@ -129,6 +109,26 @@
     <Compile Include="DataBase\Sales.cs">
       <DependentUpon>McLarenDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddCar.xaml.cs">
+      <DependentUpon>AddCar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CarDetailsWindow.xaml.cs">
+      <DependentUpon>CarDetailsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Report.xaml.cs">
+      <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ToLearnMore.xaml.cs">
+      <DependentUpon>ToLearnMore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ViewData.xaml.cs">
+      <DependentUpon>ViewData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CarViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\DBHelper.cs" />
+    <Compile Include="Assets\UserSession.cs" />
     <Compile Include="Forms\AdminPanel.xaml.cs">
       <DependentUpon>AdminPanel.xaml</DependentUpon>
     </Compile>
@@ -289,16 +289,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataBase\McLarenDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>McLarenDB.edmx</DependentUpon>
-      <LastGenOutput>McLarenDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DataBase\McLarenDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>McLarenDB.edmx</DependentUpon>
-      <LastGenOutput>McLarenDB.cs</LastGenOutput>
-    </Content>
     <Resource Include="Resources\044.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -327,6 +317,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase\McLarenDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>McLarenDB.edmx</DependentUpon>
+      <LastGenOutput>McLarenDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataBase\McLarenDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>McLarenDB.edmx</DependentUpon>
+      <LastGenOutput>McLarenDB.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

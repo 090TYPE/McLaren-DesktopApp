@@ -13,8 +13,12 @@ namespace McLaren_Store.ViewModels
 	{
 		public int CarID { get; set; }
 		public string Model { get; set; }
+		public string Color { get; set; }
+		public string EngineType { get; set; }
+		public string Transmission { get; set; }
 		public decimal? Price { get; set; }
 		public bool? Available { get; set; }
+		public string Brand { get; set; }
 
 		// Property to get the image as an ImageSource
 		public ImageSource CarImage

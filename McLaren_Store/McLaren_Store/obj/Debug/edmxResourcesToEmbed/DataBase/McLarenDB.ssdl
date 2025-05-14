@@ -13,6 +13,7 @@
     <Property Name="Transmission" Type="varchar" MaxLength="50" />
     <Property Name="Available" Type="bit" />
     <Property Name="Image" Type="varbinary(max)" />
+    <Property Name="Brand" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Customers">
     <Key>
