@@ -16,6 +16,8 @@ namespace McLaren_Store.Forms
 		private AddCar _addcarWindow;
 		private Report _reportWindow;
 		private ViewData _viewdataWindow;
+		private AllOrders _allordersWindow;
+		private ManagerOrders _managerordersWindow;
 
 		public AdminPanel()
 		{
@@ -93,6 +95,33 @@ namespace McLaren_Store.Forms
 				_viewdataWindow.Activate();
 			}
 		}
+		public void AllOrders_Click(object sender, EventArgs e)
+		{
+			if (_allordersWindow == null || !_allordersWindow.IsVisible)
+			{
+				_allordersWindow = new AllOrders();
+				_allordersWindow.Closed += (s, args) => _allordersWindow = null;
+				_allordersWindow.Show();
+			}
+			else
+			{
+				_viewdataWindow.Activate();
+			}
+		}
+		public void ManagerOrders_Click(object sender, EventArgs e)
+		{
+			if (_managerordersWindow == null || !_managerordersWindow.IsVisible)
+			{
+				_managerordersWindow = new ManagerOrders();
+				_managerordersWindow.Closed += (s, args) => _managerordersWindow = null;
+				_managerordersWindow.Show();
+			}
+			else
+			{
+				_viewdataWindow.Activate();
+			}
+		}
+
 
 		private void MinimizeWindow_Click(object sender, RoutedEventArgs e)
 		{

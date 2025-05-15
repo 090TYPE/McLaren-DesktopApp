@@ -17,7 +17,7 @@ namespace McLaren_Store.Assets
 	{
 
 		private static DBHelper _instance; // Экземпляр класса
-		private readonly McLaren_StoreEntities1 _context; // Контекст базы данных
+		private readonly McLaren_StoreEntities2 _context; // Контекст базы данных
 
 		// Синглтон для доступа к классу
 		public static DBHelper Instance
@@ -41,7 +41,7 @@ namespace McLaren_Store.Assets
 
 		private DBHelper()
 		{
-			_context = new McLaren_StoreEntities1();
+			_context = new McLaren_StoreEntities2();
 		}
 
 		public async Task<bool> IsUserNameAvailable(string userName)
@@ -266,7 +266,6 @@ namespace McLaren_Store.Assets
 
 			await _context.SaveChangesAsync();
 		}
-
 		public async Task<List<SalesViewModel>> GetAllSalesDataAsync()
 		{
 			return await _context.Sales
@@ -285,6 +284,74 @@ namespace McLaren_Store.Assets
 			public DateTime? SaleDate { get; set; }
 			public string Model { get; set; }
 			public decimal? Price { get; set; }
+		}
+		public async Task AssignOrderToManagerAsync(int saleId, int managerId)
+		{
+			// Проверка: уже назначен?
+			var exists = await _context.ManagerOrders
+				.AnyAsync(mo => mo.SaleID == saleId);
+
+			if (exists)
+				return;
+
+			var newManagerOrder = new ManagerOrders
+			{
+				SaleID = saleId,
+				EmployeeID = managerId,
+				OrderStatus = "Принят в работу "
+			};
+
+			_context.ManagerOrders.Add(newManagerOrder);
+			await _context.SaveChangesAsync();
+		}
+		public async Task<List<ManagerOrderViewModel>> GetOrdersForManagerAsync(int managerId)
+		{
+			var orders = await _context.ManagerOrders
+				.Where(mo => mo.EmployeeID == managerId)
+				.Include(mo => mo.Sales.Customers)
+				.Include(mo => mo.Sales.Cars)
+				.ToListAsync();
+
+			return orders.Select(mo => new ManagerOrderViewModel
+			{
+				OrderId = mo.OrderID,
+				ClientName = mo.Sales.Customers.FirstName + " " + mo.Sales.Customers.LastName,
+				CarModel = mo.Sales.Cars.Model,
+				Price = mo.Sales.SalePrice,
+				OrderDate = mo.Sales.SaleDate,
+				Status = mo.OrderStatus
+			}).ToList();
+		}
+		public async Task<bool> UpdateOrderStatusAsync(int orderId, string newStatus)
+		{
+			try
+			{
+				var order = await _context.ManagerOrders.FindAsync(orderId);
+				if (order == null)
+					return false;
+
+				order.OrderStatus = newStatus;
+				await _context.SaveChangesAsync();
+				return true;
+			}
+			catch
+			{
+				return false;
+			}
+		}
+		public async Task<Sales> GetSaleByIdAsync(int? saleId)
+		{
+			return await _context.Sales.FirstOrDefaultAsync(s => s.SaleID == saleId);
+		}
+
+		public async Task<Customers> GetCustomerByIdAsync(int? customerId)
+		{
+			return await _context.Customers.FirstOrDefaultAsync(c => c.CustomerID == customerId);
+		}
+
+		public async Task<Cars> GetCarByIdAsync(int? carId)
+		{
+			return await _context.Cars.FirstOrDefaultAsync(c => c.CarID == carId);
 		}
 
 	}

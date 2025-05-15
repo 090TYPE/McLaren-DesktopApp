@@ -47,6 +47,15 @@
           <Property Name="HireDate" Type="date" />
           <Property Name="Salary" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
+        <EntityType Name="ManagerOrders">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SaleID" Type="int" Nullable="false" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="OrderStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Roles">
           <Key>
             <PropertyRef Name="RoleID" />
@@ -61,7 +70,6 @@
           <Property Name="SaleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CarID" Type="int" />
           <Property Name="CustomerID" Type="int" />
-          <Property Name="EmployeeID" Type="int" />
           <Property Name="SaleDate" Type="date" />
           <Property Name="SalePrice" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
@@ -101,15 +109,27 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Sales__EmployeeI__5441852A">
-          <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
-          <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+        <Association Name="FK_ManagerOrders_Employees">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="ManagerOrders" Type="Self.ManagerOrders" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employees">
               <PropertyRef Name="EmployeeID" />
             </Principal>
-            <Dependent Role="Sales">
+            <Dependent Role="ManagerOrders">
               <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ManagerOrders_Sales">
+          <End Role="Sales" Type="Self.Sales" Multiplicity="1" />
+          <End Role="ManagerOrders" Type="Self.ManagerOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sales">
+              <PropertyRef Name="SaleID" />
+            </Principal>
+            <Dependent Role="ManagerOrders">
+              <PropertyRef Name="SaleID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -117,6 +137,7 @@
           <EntitySet Name="Cars" EntityType="Self.Cars" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ManagerOrders" EntityType="Self.ManagerOrders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Employees__RoleI__5165187F" Association="Self.FK__Employees__RoleI__5165187F">
@@ -131,9 +152,13 @@
             <End Role="Customers" EntitySet="Customers" />
             <End Role="Sales" EntitySet="Sales" />
           </AssociationSet>
-          <AssociationSet Name="FK__Sales__EmployeeI__5441852A" Association="Self.FK__Sales__EmployeeI__5441852A">
+          <AssociationSet Name="FK_ManagerOrders_Employees" Association="Self.FK_ManagerOrders_Employees">
             <End Role="Employees" EntitySet="Employees" />
+            <End Role="ManagerOrders" EntitySet="ManagerOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ManagerOrders_Sales" Association="Self.FK_ManagerOrders_Sales">
             <End Role="Sales" EntitySet="Sales" />
+            <End Role="ManagerOrders" EntitySet="ManagerOrders" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -185,7 +210,18 @@
           <Property Name="HireDate" Type="DateTime" Precision="0" />
           <Property Name="Salary" Type="Decimal" Precision="18" Scale="2" />
           <NavigationProperty Name="Roles" Relationship="Self.FK__Employees__RoleI__5165187F" FromRole="Employees" ToRole="Roles" />
-          <NavigationProperty Name="Sales" Relationship="Self.FK__Sales__EmployeeI__5441852A" FromRole="Employees" ToRole="Sales" />
+          <NavigationProperty Name="ManagerOrders" Relationship="Self.FK_ManagerOrders_Employees" FromRole="Employees" ToRole="ManagerOrders" />
+        </EntityType>
+        <EntityType Name="ManagerOrders">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SaleID" Type="Int32" Nullable="false" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="OrderStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK_ManagerOrders_Employees" FromRole="ManagerOrders" ToRole="Employees" />
+          <NavigationProperty Name="Sales" Relationship="Self.FK_ManagerOrders_Sales" FromRole="ManagerOrders" ToRole="Sales" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -202,12 +238,11 @@
           <Property Name="SaleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CarID" Type="Int32" />
           <Property Name="CustomerID" Type="Int32" />
-          <Property Name="EmployeeID" Type="Int32" />
           <Property Name="SaleDate" Type="DateTime" Precision="0" />
           <Property Name="SalePrice" Type="Decimal" Precision="18" Scale="2" />
           <NavigationProperty Name="Cars" Relationship="Self.FK__Sales__CarID__52593CB8" FromRole="Sales" ToRole="Cars" />
           <NavigationProperty Name="Customers" Relationship="Self.FK__Sales__CustomerI__534D60F1" FromRole="Sales" ToRole="Customers" />
-          <NavigationProperty Name="Employees" Relationship="Self.FK__Sales__EmployeeI__5441852A" FromRole="Sales" ToRole="Employees" />
+          <NavigationProperty Name="ManagerOrders" Relationship="Self.FK_ManagerOrders_Sales" FromRole="Sales" ToRole="ManagerOrders" />
         </EntityType>
         <Association Name="FK__Sales__CarID__52593CB8">
           <End Role="Cars" Type="Self.Cars" Multiplicity="0..1" />
@@ -245,22 +280,35 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Sales__EmployeeI__5441852A">
-          <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
-          <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+        <Association Name="FK_ManagerOrders_Employees">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="ManagerOrders" Type="Self.ManagerOrders" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employees">
               <PropertyRef Name="EmployeeID" />
             </Principal>
-            <Dependent Role="Sales">
+            <Dependent Role="ManagerOrders">
               <PropertyRef Name="EmployeeID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="McLaren_StoreEntities1" annotation:LazyLoadingEnabled="true">
+        <Association Name="FK_ManagerOrders_Sales">
+          <End Role="Sales" Type="Self.Sales" Multiplicity="1" />
+          <End Role="ManagerOrders" Type="Self.ManagerOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sales">
+              <PropertyRef Name="SaleID" />
+            </Principal>
+            <Dependent Role="ManagerOrders">
+              <PropertyRef Name="SaleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="McLaren_StoreEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cars" EntityType="Self.Cars" />
           <EntitySet Name="Customers" EntityType="Self.Customers" />
           <EntitySet Name="Employees" EntityType="Self.Employees" />
+          <EntitySet Name="ManagerOrders" EntityType="Self.ManagerOrders" />
           <EntitySet Name="Roles" EntityType="Self.Roles" />
           <EntitySet Name="Sales" EntityType="Self.Sales" />
           <AssociationSet Name="FK__Sales__CarID__52593CB8" Association="Self.FK__Sales__CarID__52593CB8">
@@ -275,9 +323,13 @@
             <End Role="Roles" EntitySet="Roles" />
             <End Role="Employees" EntitySet="Employees" />
           </AssociationSet>
-          <AssociationSet Name="FK__Sales__EmployeeI__5441852A" Association="Self.FK__Sales__EmployeeI__5441852A">
+          <AssociationSet Name="FK_ManagerOrders_Employees" Association="Self.FK_ManagerOrders_Employees">
             <End Role="Employees" EntitySet="Employees" />
+            <End Role="ManagerOrders" EntitySet="ManagerOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ManagerOrders_Sales" Association="Self.FK_ManagerOrders_Sales">
             <End Role="Sales" EntitySet="Sales" />
+            <End Role="ManagerOrders" EntitySet="ManagerOrders" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -285,7 +337,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище McLaren_StoreModelContainer" CdmEntityContainer="McLaren_StoreEntities1">
+        <EntityContainerMapping StorageEntityContainer="Хранилище McLaren_StoreModelContainer" CdmEntityContainer="McLaren_StoreEntities2">
           <EntitySetMapping Name="Cars">
             <EntityTypeMapping TypeName="McLaren_StoreModel.Cars">
               <MappingFragment StoreEntitySet="Cars">
@@ -331,6 +383,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ManagerOrders">
+            <EntityTypeMapping TypeName="McLaren_StoreModel.ManagerOrders">
+              <MappingFragment StoreEntitySet="ManagerOrders">
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="SaleID" ColumnName="SaleID" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Roles">
             <EntityTypeMapping TypeName="McLaren_StoreModel.Roles">
               <MappingFragment StoreEntitySet="Roles">
@@ -345,7 +407,6 @@
                 <ScalarProperty Name="SaleID" ColumnName="SaleID" />
                 <ScalarProperty Name="CarID" ColumnName="CarID" />
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
-                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
                 <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
                 <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
               </MappingFragment>

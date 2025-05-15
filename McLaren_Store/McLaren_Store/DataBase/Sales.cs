@@ -14,15 +14,21 @@ namespace McLaren_Store.DataBase
     
     public partial class Sales
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Sales()
+        {
+            this.ManagerOrders = new HashSet<ManagerOrders>();
+        }
+    
         public int SaleID { get; set; }
         public Nullable<int> CarID { get; set; }
         public Nullable<int> CustomerID { get; set; }
-        public Nullable<int> EmployeeID { get; set; }
         public Nullable<System.DateTime> SaleDate { get; set; }
         public Nullable<decimal> SalePrice { get; set; }
     
         public virtual Cars Cars { get; set; }
         public virtual Customers Customers { get; set; }
-        public virtual Employees Employees { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ManagerOrders> ManagerOrders { get; set; }
     }
 }

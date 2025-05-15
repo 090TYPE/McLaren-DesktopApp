@@ -17,7 +17,7 @@ namespace McLaren_Store.DataBase
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Employees()
         {
-            this.Sales = new HashSet<Sales>();
+            this.ManagerOrders = new HashSet<ManagerOrders>();
         }
     
         public int EmployeeID { get; set; }
@@ -32,6 +32,6 @@ namespace McLaren_Store.DataBase
     
         public virtual Roles Roles { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sales> Sales { get; set; }
+        public virtual ICollection<ManagerOrders> ManagerOrders { get; set; }
     }
 }

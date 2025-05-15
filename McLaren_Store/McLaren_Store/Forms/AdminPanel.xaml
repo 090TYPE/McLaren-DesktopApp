@@ -45,7 +45,7 @@
         <DockPanel LastChildFill="True">
             <!-- Верхняя панель навигации -->
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="{StaticResource PrimaryBrush}">
-                <Button Content="Добавить машину" Width="150" Click="AddCar_Click">
+                <Button Content="Добавить машину" Width="120" Click="AddCar_Click">
                     <Button.Triggers>
                         <EventTrigger RoutedEvent="Button.PreviewMouseDown">
                             <BeginStoryboard>
@@ -65,11 +65,13 @@
                         </EventTrigger>
                     </Button.Triggers>
                 </Button>
-                <Button Content="Отчёт" Width="150" Click="Report_Click" />
-                <Button Content="База Данных" Width="150" Click="Database_Click" />
+                <Button Content="Отчёт" Width="110" Click="Report_Click" />
+                <Button Content="База Данных" Width="110" Click="Database_Click" />
+                <Button Content="Заказы" Width="110" Click="AllOrders_Click" />
+                <Button Content="Заказы менеджеров" Width="130" Click="ManagerOrders_Click" />
 
                 <!-- Управление окном -->
-                <StackPanel Orientation="Horizontal" Margin="195 ,0,0,0"  VerticalAlignment="Top" Height="42">
+                <StackPanel Orientation="Horizontal" Margin="35 ,0,0,0"  VerticalAlignment="Top" Height="42">
                     <Button Content="—" Width="40" Click="MinimizeWindow_Click" />
                     <Button Content="✖" Width="40" Click="CloseWindow_Click" />
                 </StackPanel>

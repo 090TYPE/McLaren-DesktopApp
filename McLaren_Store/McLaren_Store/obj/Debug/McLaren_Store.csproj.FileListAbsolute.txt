@@ -155,3 +155,7 @@ C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\ToLearnMore.baml
 C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\ToLearnMore.g.cs
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\AllOrders.baml
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\AllOrders.g.cs
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\ManagerOrders.g.cs
+C:\Users\090TYPE\Documents\GitHub\McLaren-DesktopApp\McLaren_Store\McLaren_Store\obj\Debug\Forms\ManagerOrders.baml

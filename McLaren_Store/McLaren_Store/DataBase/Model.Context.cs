@@ -13,10 +13,10 @@ namespace McLaren_Store.DataBase
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class McLaren_StoreEntities1 : DbContext
+    public partial class McLaren_StoreEntities2 : DbContext
     {
-        public McLaren_StoreEntities1()
-            : base("name=McLaren_StoreEntities1")
+        public McLaren_StoreEntities2()
+            : base("name=McLaren_StoreEntities2")
         {
         }
     
@@ -28,6 +28,7 @@ namespace McLaren_Store.DataBase
         public virtual DbSet<Cars> Cars { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
         public virtual DbSet<Employees> Employees { get; set; }
+        public virtual DbSet<ManagerOrders> ManagerOrders { get; set; }
         public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<Sales> Sales { get; set; }
     }
