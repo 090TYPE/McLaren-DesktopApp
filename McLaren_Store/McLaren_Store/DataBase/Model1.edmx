@@ -72,6 +72,7 @@
           <Property Name="CustomerID" Type="int" />
           <Property Name="SaleDate" Type="date" />
           <Property Name="SalePrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="visible" Type="bit" Nullable="false" />
         </EntityType>
         <Association Name="FK__Employees__RoleI__5165187F">
           <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
@@ -240,6 +241,7 @@
           <Property Name="CustomerID" Type="Int32" />
           <Property Name="SaleDate" Type="DateTime" Precision="0" />
           <Property Name="SalePrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="visible" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Cars" Relationship="Self.FK__Sales__CarID__52593CB8" FromRole="Sales" ToRole="Cars" />
           <NavigationProperty Name="Customers" Relationship="Self.FK__Sales__CustomerI__534D60F1" FromRole="Sales" ToRole="Customers" />
           <NavigationProperty Name="ManagerOrders" Relationship="Self.FK_ManagerOrders_Sales" FromRole="Sales" ToRole="ManagerOrders" />
@@ -304,7 +306,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="McLaren_StoreEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="McLaren_StoreEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cars" EntityType="Self.Cars" />
           <EntitySet Name="Customers" EntityType="Self.Customers" />
           <EntitySet Name="Employees" EntityType="Self.Employees" />
@@ -337,7 +339,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище McLaren_StoreModelContainer" CdmEntityContainer="McLaren_StoreEntities2">
+        <EntityContainerMapping StorageEntityContainer="Хранилище McLaren_StoreModelContainer" CdmEntityContainer="McLaren_StoreEntities3">
           <EntitySetMapping Name="Cars">
             <EntityTypeMapping TypeName="McLaren_StoreModel.Cars">
               <MappingFragment StoreEntitySet="Cars">
@@ -409,6 +411,7 @@
                 <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
                 <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
                 <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+                <ScalarProperty Name="visible" ColumnName="visible" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

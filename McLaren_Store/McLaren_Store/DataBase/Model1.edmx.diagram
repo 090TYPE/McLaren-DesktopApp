@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a45f657c2a894752b27ad51b89ae6d64" Name="Diagram1" ZoomLevel="94">
+      <Diagram DiagramId="d9bc19e906ad41e1ba6937d881aac417" Name="Diagram1">
         <EntityTypeShape EntityType="McLaren_StoreModel.Cars" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="McLaren_StoreModel.Customers" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="McLaren_StoreModel.Employees" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="McLaren_StoreModel.ManagerOrders" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="McLaren_StoreModel.Roles" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="McLaren_StoreModel.Sales" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="McLaren_StoreModel.Sales" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <AssociationConnector Association="McLaren_StoreModel.FK__Sales__CarID__52593CB8" ManuallyRouted="false" />
         <AssociationConnector Association="McLaren_StoreModel.FK__Sales__CustomerI__534D60F1" ManuallyRouted="false" />
         <AssociationConnector Association="McLaren_StoreModel.FK__Employees__RoleI__5165187F" ManuallyRouted="false" />

@@ -20,10 +20,10 @@ namespace McLaren_Store.Forms
 		private async void LoadOrders()
 		{
 			Orders.Clear();
-			var allSales = await DBHelper.Instance.GetAllSalesAsync(); // Получаем все продажи
+			var allSales = await DBHelper.Instance.GetVisibleSalesAsync();
+
 			foreach (var sale in allSales)
 			{
-				// Получаем имя клиента и модель машины
 				var customer = await DBHelper.Instance.GetCustomerByIdAsync(sale.CustomerID);
 				var car = await DBHelper.Instance.GetCarByIdAsync(sale.CarID);
 
@@ -45,8 +45,9 @@ namespace McLaren_Store.Forms
 				// Назначаем заказ менеджеру из UserSession
 				int managerId = UserSession.Instance.CurrentUser.Id;
 				await DBHelper.Instance.AssignOrderToManagerAsync(selectedOrder.OrderId, managerId);
-
+				
 				MessageBox.Show("Заказ взят в работу");
+				LoadOrders();
 			}
 		}
 		private void MinimizeWindow_Click(object sender, RoutedEventArgs e)

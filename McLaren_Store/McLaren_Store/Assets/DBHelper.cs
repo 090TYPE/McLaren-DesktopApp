@@ -17,7 +17,7 @@ namespace McLaren_Store.Assets
 	{
 
 		private static DBHelper _instance; // Экземпляр класса
-		private readonly McLaren_StoreEntities2 _context; // Контекст базы данных
+		private readonly McLaren_StoreEntities3 _context; // Контекст базы данных
 
 		// Синглтон для доступа к классу
 		public static DBHelper Instance
@@ -41,7 +41,7 @@ namespace McLaren_Store.Assets
 
 		private DBHelper()
 		{
-			_context = new McLaren_StoreEntities2();
+			_context = new McLaren_StoreEntities3();
 		}
 
 		public async Task<bool> IsUserNameAvailable(string userName)
@@ -51,7 +51,16 @@ namespace McLaren_Store.Assets
 
 			return !isCustomerExists && !isEmployeeExists;
 		}
+		public async Task<bool> HideSaleAsync(int saleId)
+		{
+			var sale = await _context.Sales.FirstOrDefaultAsync(s => s.SaleID == saleId);
+			if (sale == null)
+				return false;
 
+			sale.visible = false;  // Скрываем заказ
+			await _context.SaveChangesAsync();
+			return true;
+		}
 		// Метод для добавления нового клиента
 		public async Task<bool> RegisterCustomer(string userName, string password, string firstName, string lastName, string phoneNumber, string email, string address)
 		{
@@ -287,10 +296,7 @@ namespace McLaren_Store.Assets
 		}
 		public async Task AssignOrderToManagerAsync(int saleId, int managerId)
 		{
-			// Проверка: уже назначен?
-			var exists = await _context.ManagerOrders
-				.AnyAsync(mo => mo.SaleID == saleId);
-
+			var exists = await _context.ManagerOrders.AnyAsync(mo => mo.SaleID == saleId);
 			if (exists)
 				return;
 
@@ -298,11 +304,23 @@ namespace McLaren_Store.Assets
 			{
 				SaleID = saleId,
 				EmployeeID = managerId,
-				OrderStatus = "Принят в работу "
+				OrderStatus = "Принят в работу"
 			};
 
 			_context.ManagerOrders.Add(newManagerOrder);
+
+			// Скрываем заказ из списка доступных
+			var sale = await _context.Sales.FirstOrDefaultAsync(s => s.SaleID == saleId);
+			if (sale != null)
+			{
+				sale.visible = false;
+			}
+
 			await _context.SaveChangesAsync();
+		}
+		public async Task<List<Sales>> GetVisibleSalesAsync()
+		{
+			return await _context.Sales.Where(s => s.visible == true).ToListAsync();
 		}
 		public async Task<List<ManagerOrderViewModel>> GetOrdersForManagerAsync(int managerId)
 		{

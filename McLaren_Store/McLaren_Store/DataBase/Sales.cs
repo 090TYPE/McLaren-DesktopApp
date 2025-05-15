@@ -25,6 +25,7 @@ namespace McLaren_Store.DataBase
         public Nullable<int> CustomerID { get; set; }
         public Nullable<System.DateTime> SaleDate { get; set; }
         public Nullable<decimal> SalePrice { get; set; }
+        public bool visible { get; set; }
     
         public virtual Cars Cars { get; set; }
         public virtual Customers Customers { get; set; }
