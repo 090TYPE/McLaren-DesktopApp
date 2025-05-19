@@ -219,7 +219,8 @@ namespace McLaren_Store.Assets
 					CarID = carId,
 					CustomerID = customerId,
 					SaleDate = DateTime.Now,
-					SalePrice = salePrice.Value
+					SalePrice = salePrice.Value,
+					visible = true
 				};
 
 				// Добавление записи о продаже

@@ -7,11 +7,41 @@
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="Report" Height="200" Width="300">
-    <Grid Margin="0,10,0,0">
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Height="154" Width="280">
-            <TextBlock Text="Создание отчётов в Excel" FontSize="20" FontWeight="Bold" TextAlignment="Center" />
-            <Button Content="Сколько машин купили" Width="200" Click="OnCarsPurchasedReportClick" />
-            <Button Content="Все продажи" Width="200" Click="OnSalesReportClick" />
-        </StackPanel>
-    </Grid>
+    <Window.Resources>
+        <!-- Основные цвета -->
+        <Color x:Key="PrimaryColor">#212121</Color>
+        <Color x:Key="SecondaryColor">#F5F5F5</Color>
+        <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
+        <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryColor}" />
+
+        <!-- Стиль для кнопок -->
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}" />
+            <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="10,5" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                             CornerRadius="15"
+                             BorderBrush="{TemplateBinding BorderBrush}"
+                             BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Border Background="{StaticResource PrimaryBrush}" CornerRadius="15" Padding="10">
+        <Grid Margin="0,10,0,0">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Height="154" Width="280">
+                <TextBlock Text="Создание отчётов в Excel" FontSize="20" FontWeight="Bold" TextAlignment="Center" Foreground="#FFF9F9F9"/>
+                <Button Content="Сколько машин купили" Width="200" Click="OnCarsPurchasedReportClick" />
+                <Button Content="Все продажи" Width="200" Click="OnSalesReportClick" />
+            </StackPanel>
+        </Grid>
+    </Border>
 </Window>

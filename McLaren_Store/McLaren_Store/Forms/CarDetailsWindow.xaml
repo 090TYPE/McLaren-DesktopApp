@@ -90,12 +90,12 @@
 
                     <TextBlock Text="Состояние:" FontWeight="Bold" Foreground="White" />
                     <TextBlock Text="{Binding Available, Converter={StaticResource BoolToTextConverter}}" 
-                               Foreground="{Binding Available, Converter={StaticResource BoolToColorConverter}}" 
+                               Foreground="White" 
                                Margin="0,0,0,10" />
                 </StackPanel>
 
                 <!-- Кнопка покупки -->
-                <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="Купить сейчас" Click="BuyNow_Click" Width="150" HorizontalAlignment="Left" Margin="270,350,0,10" Height="40" />
+                <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Content="Заказать" Click="BuyNow_Click" Width="150" HorizontalAlignment="Left" Margin="270,350,0,10" Height="40" />
             </Grid>
         </Grid>
     </Border>

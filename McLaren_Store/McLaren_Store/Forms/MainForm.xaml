@@ -47,7 +47,7 @@
                 <Button Width="100" Height="40" Background="Transparent" BorderThickness="0">
                     <TextBlock Background="{StaticResource PrimaryBrush}" Text="ЦИФРА&#x0a; ОДИН"/>
                 </Button>
-                <Button Content="Купить" Width="100" Click="Buy_Click" >
+                <Button Content="Машины" Width="100" Click="Buy_Click" >
                     <Button.Triggers>
                         <EventTrigger RoutedEvent="Button.PreviewMouseDown">
                             <BeginStoryboard>

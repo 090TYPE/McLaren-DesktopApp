@@ -16,6 +16,13 @@
         <Color x:Key="SecondaryColor">#F5F5F5</Color>
         <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}" />
         <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource SecondaryColor}" />
+        <Style TargetType="GridViewColumnHeader">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
         <Style TargetType="ComboBox">
             <Setter Property="Foreground" Value="{StaticResource SecondaryBrush}" />
             <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
