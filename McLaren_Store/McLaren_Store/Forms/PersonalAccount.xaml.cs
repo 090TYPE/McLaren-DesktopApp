@@ -40,6 +40,23 @@ namespace McLaren_Store.Forms
 			}
 		}
 
+		private void Relog_Click(object sender, RoutedEventArgs e)
+		{
+			UserSession.Instance.ClearSession();
+			if (_mainForm == null || !_mainForm.IsVisible)
+			{
+				_mainForm = new MainForm();
+				_mainForm.Closed += (s, args) => _mainForm = null;
+				_mainForm.Show();
+				this.Close();
+			}
+			else
+			{
+				_mainForm.Activate();
+			}
+
+		}
+
 		private void BackToMenu_Click(object sender, RoutedEventArgs e)
 		{
 			if (_mainForm == null || !_mainForm.IsVisible)

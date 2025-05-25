@@ -47,7 +47,7 @@
             <ScrollViewer Margin="10,50,10,10" VerticalScrollBarVisibility="Auto">
                 <StackPanel Orientation="Vertical">
                     <!-- Заголовок -->
-                    <TextBlock Text="О компании McLaren" FontSize="24" FontWeight="Bold" 
+                    <TextBlock Text="О компании Цифра один" FontSize="24" FontWeight="Bold" 
                    Foreground="{StaticResource SecondaryBrush}" HorizontalAlignment="Center" Margin="0,0,0,20" />
 
                     <!-- Первый блок с изображением и текстом -->
@@ -60,31 +60,28 @@
                         <Image Source="pack://application:,,,/Resources/044.jpg" Grid.Column="0" Margin="10"
                    MaxHeight="150" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top" />
 
-                        <TextBlock Text="McLaren – это легендарный бренд, известный своим инновационным подходом в автомобильной промышленности и невероятными достижениями в мире автоспорта. 
-                              Компания была основана в 1963 году Брюсом Маклареном и с тех пор занимает лидирующие позиции в разработке суперкаров."
+                        <TextBlock Text="Цифра один — это современный автосалон, предлагающий широкий ассортимент автомобилей от ведущих мировых производителей. Мы стремимся предоставить каждому клиенту лучший опыт покупки автомобиля с высоким уровнем сервиса и индивидуальным подходом."
                        Grid.Column="1" Foreground="{StaticResource SecondaryBrush}" TextWrapping="Wrap" Margin="10" FontSize="16" />
                     </Grid>
 
                     <!-- Второй блок с текстом -->
-                    <TextBlock Text="McLaren активно развивает технологии будущего, которые находят применение как в гоночных болидах Формулы 1, так и в серийных автомобилях. 
-                          Каждый автомобиль McLaren – это произведение искусства, сочетающее в себе высокую производительность, изысканный стиль и передовые технологии."
+                    <TextBlock Text="Наш автосалон предоставляет как новые автомобили, так и автомобили с пробегом, прошедшие тщательную проверку. Мы предлагаем выгодные условия покупки, включая кредитование, лизинг и трейд-ин. Специалисты компании помогут подобрать оптимальный вариант для каждого клиента."
                    Foreground="{StaticResource SecondaryBrush}" TextWrapping="Wrap" Margin="10,0,10,20" FontSize="16" />
 
                     <!-- Второе изображение -->
                     <Image Source="pack://application:,,,/Resources/1570637024_85_52.jpg" Margin="10,0,10,20" MaxHeight="300" Stretch="Uniform" />
 
                     <!-- Третий блок текста -->
-                    <TextBlock Text="Автомобили McLaren созданы для истинных ценителей скорости и эстетики. 
-                          Производство каждого автомобиля осуществляется вручную с использованием высококачественных материалов. 
-                          Компания гордится тем, что предлагает клиентам не просто автомобили, а уникальный опыт и неповторимые эмоции."
+                    <TextBlock Text="Цифра один — это не просто покупка автомобиля, это целый комплекс услуг: сервисное обслуживание, страхование, помощь при регистрации и техническая поддержка. Мы заботимся о комфорте клиентов на каждом этапе взаимодействия."
                    Foreground="{StaticResource SecondaryBrush}" TextWrapping="Wrap" Margin="10,0,10,20" FontSize="16" />
 
                     <!-- Третье изображение -->
                     <Image Source="pack://application:,,,/Resources/6f22b6as-960.jpg" Margin="10,0,10,20" MaxHeight="300" Stretch="Uniform" />
 
                     <!-- Завершающий текст -->
-                    <TextBlock Text="McLaren всегда стремится к совершенству. Станьте частью этого легендарного пути и узнайте, что значит быть частью семьи McLaren."
+                    <TextBlock Text="Добро пожаловать в автосалон Цифра один — место, где ваш автомобиль ждёт вас. Присоединяйтесь к числу довольных клиентов уже сегодня!"
                    Foreground="{StaticResource SecondaryBrush}" TextWrapping="Wrap" Margin="10,0,10,20" FontSize="16" />
+
                     <Button Grid.Row="1" Content="Назад" Width="100" Height="40" 
                         HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" 
                         Click="BackToMainForm_Click" />

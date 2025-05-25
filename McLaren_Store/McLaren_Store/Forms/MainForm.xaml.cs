@@ -123,7 +123,6 @@ namespace McLaren_Store.Forms
 					_cars = new CarsWindow();
 					_cars.Closed += (s, args) => _cars = null;
 					_cars.Show();
-					this.Close();
 				}
 				else
 				{

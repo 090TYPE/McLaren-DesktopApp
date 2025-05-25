@@ -3,24 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\mclaren_store\\assets\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\assets\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|c:\\users\\090type\\documents\\github\\mclaren-desktopapp\\mclaren_store\\mclaren_store\\forms\\tolearnmore.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\tolearnmore.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|c:\\users\\090type\\documents\\github\\mclaren-desktopapp\\mclaren_store\\mclaren_store\\forms\\mainform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\mainform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|c:\\users\\090type\\documents\\github\\mclaren-desktopapp\\mclaren_store\\mclaren_store\\forms\\tolearnmore.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\tolearnmore.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\mclaren_store\\forms\\cardetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\cardetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|c:\\users\\090type\\documents\\github\\mclaren-desktopapp\\mclaren_store\\mclaren_store\\forms\\viewdata.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\viewdata.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|c:\\users\\090type\\documents\\github\\mclaren-desktopapp\\mclaren_store\\mclaren_store\\forms\\personalaccount.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\personalaccount.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\mclaren_store\\forms\\personalaccount.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\personalaccount.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\mclaren_store\\forms\\carswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\carswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\mclaren_store\\forms\\mainform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\mainform.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\mclaren_store\\forms\\managerorders.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\managerorders.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\mclaren_store\\forms\\mainform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\mainform.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\mclaren_store\\assets\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\assets\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\mclaren_store\\forms\\cardetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|solutionrelative:mclaren_store\\forms\\cardetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31E762FA-ABD8-4D4B-BBC1-31B420B00E6F}|McLaren_Store\\McLaren_Store.csproj|C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\mclaren_store\\forms\\allorders.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -54,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 369,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -63,18 +87,90 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ToLearnMore.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\ToLearnMore.xaml.cs",
+              "RelativeDocumentMoniker": "McLaren_Store\\Forms\\ToLearnMore.xaml.cs",
+              "ToolTip": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\ToLearnMore.xaml.cs",
+              "RelativeToolTip": "McLaren_Store\\Forms\\ToLearnMore.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T10:52:18.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ToLearnMore.xaml",
+              "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\ToLearnMore.xaml",
+              "RelativeDocumentMoniker": "McLaren_Store\\Forms\\ToLearnMore.xaml",
+              "ToolTip": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\ToLearnMore.xaml",
+              "RelativeToolTip": "McLaren_Store\\Forms\\ToLearnMore.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-25T10:48:21.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ViewData.xaml",
+              "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\ViewData.xaml",
+              "RelativeDocumentMoniker": "McLaren_Store\\Forms\\ViewData.xaml",
+              "ToolTip": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\ViewData.xaml",
+              "RelativeToolTip": "McLaren_Store\\Forms\\ViewData.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-25T10:48:18.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PersonalAccount.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\PersonalAccount.xaml.cs",
+              "RelativeDocumentMoniker": "McLaren_Store\\Forms\\PersonalAccount.xaml.cs",
+              "ToolTip": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\PersonalAccount.xaml.cs",
+              "RelativeToolTip": "McLaren_Store\\Forms\\PersonalAccount.xaml.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T10:40:26.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PersonalAccount.xaml",
+              "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\PersonalAccount.xaml",
+              "RelativeDocumentMoniker": "McLaren_Store\\Forms\\PersonalAccount.xaml",
+              "ToolTip": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\PersonalAccount.xaml",
+              "RelativeToolTip": "McLaren_Store\\Forms\\PersonalAccount.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-25T10:39:37.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainForm.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\MainForm.xaml.cs",
+              "RelativeDocumentMoniker": "McLaren_Store\\Forms\\MainForm.xaml.cs",
+              "ToolTip": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\MainForm.xaml.cs",
+              "RelativeToolTip": "McLaren_Store\\Forms\\MainForm.xaml.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAuwHAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T10:27:26.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MainForm.xaml",
               "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\MainForm.xaml",
               "RelativeDocumentMoniker": "McLaren_Store\\Forms\\MainForm.xaml",
               "ToolTip": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\MainForm.xaml",
               "RelativeToolTip": "McLaren_Store\\Forms\\MainForm.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-18T23:46:34.061Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T23:46:34.061Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "CarDetailsWindow.xaml",
               "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\CarDetailsWindow.xaml",
               "RelativeDocumentMoniker": "McLaren_Store\\Forms\\CarDetailsWindow.xaml",
@@ -85,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ManagerOrders.xaml",
               "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\ManagerOrders.xaml",
               "RelativeDocumentMoniker": "McLaren_Store\\Forms\\ManagerOrders.xaml",
@@ -96,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "DBHelper.cs",
               "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Assets\\DBHelper.cs",
               "RelativeDocumentMoniker": "McLaren_Store\\Assets\\DBHelper.cs",
@@ -104,12 +200,11 @@
               "RelativeToolTip": "McLaren_Store\\Assets\\DBHelper.cs",
               "ViewState": "AgIAALkAAAAAAAAAAAArwNcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T22:28:09.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T22:28:09.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "CarDetailsWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\CarDetailsWindow.xaml.cs",
               "RelativeDocumentMoniker": "McLaren_Store\\Forms\\CarDetailsWindow.xaml.cs",
@@ -121,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Forms\\CarsWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\CarsWindow.xaml.cs",
               "RelativeDocumentMoniker": "McLaren_Store\\Forms\\CarsWindow.xaml.cs",
@@ -133,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CarsWindow.xaml",
               "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\CarsWindow.xaml",
               "RelativeDocumentMoniker": "McLaren_Store\\Forms\\CarsWindow.xaml",
@@ -144,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "AllOrders.xaml",
               "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\AllOrders.xaml",
               "RelativeDocumentMoniker": "McLaren_Store\\Forms\\AllOrders.xaml",
@@ -155,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "Registrations.xaml",
               "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\Registrations.xaml",
               "RelativeDocumentMoniker": "McLaren_Store\\Forms\\Registrations.xaml",
@@ -166,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "Report.xaml",
               "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\Report.xaml",
               "RelativeDocumentMoniker": "McLaren_Store\\Forms\\Report.xaml",
@@ -177,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "Report.xaml.cs",
               "DocumentMoniker": "C:\\Users\\090TYPE\\Documents\\GitHub\\McLaren-DesktopApp\\McLaren_Store\\McLaren_Store\\Forms\\Report.xaml.cs",
               "RelativeDocumentMoniker": "McLaren_Store\\Forms\\Report.xaml.cs",

@@ -121,6 +121,8 @@
                     <!-- Button to return to main menu -->
                     <Button Content="Назад в меню" Height="40" Width="150" HorizontalAlignment="Center" 
                             Click="BackToMenu_Click" Margin="0,20,0,0" />
+                    <Button Content="Выход из аккаунта" Height="40" Width="150" HorizontalAlignment="Center" 
+        Click="Relog_Click" Margin="0,20,0,0" />
                 </StackPanel>
 
                 <!-- Правая колонка с историей заказов -->

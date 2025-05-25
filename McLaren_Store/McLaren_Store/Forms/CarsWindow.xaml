@@ -43,8 +43,10 @@
                     <TextBlock Text="Доступные автомобили" FontSize="24" FontWeight="Bold" Foreground="White" Margin="0,10,0,20" Height="37"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right"  VerticalAlignment="Top" Height="50" Width="101" Margin="390,0,0,0">
+
                     <Button Content="—" Width="40" Click="MinimizeWindow_Click" />
                     <Button Content="✖" Width="40" Click="CloseWindow_Click" />
+                    <Button Content="✖" Width="40" Click="BackWindow_Click" />
                 </StackPanel>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,0,0,10" HorizontalAlignment="Left">
