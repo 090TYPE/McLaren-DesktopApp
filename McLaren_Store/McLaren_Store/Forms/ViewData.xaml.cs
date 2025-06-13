@@ -1,88 +1,85 @@
 ﻿using System;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Data.Entity;  // Для .Load()
 using System.Windows;
 using System.Windows.Controls;
-using McLaren_Store.Assets;
 using McLaren_Store.DataBase;
 
 namespace McLaren_Store.Forms
 {
-
 	public partial class ViewData : Window
 	{
-		public ObservableCollection<Cars> CarsCollection { get; set; }
-		public ObservableCollection<Customers> CustomersCollection { get; set; }
-		public ObservableCollection<Sales> SalesCollection { get; set; }
-		public ObservableCollection<Employees> EmployeesCollection { get; set; }
-		public ObservableCollection<Roles> RolesCollection { get; set; }
+		private McLaren_StoreEntities3 _context = new McLaren_StoreEntities3();
+		private string _currentTable = "";
 
 		public ViewData()
 		{
-			
 			InitializeComponent();
-			LoadAllDataAsync();
-			DataContext = this;
+			TableSelector.ItemsSource = new List<string>
+			{
+				"Cars", "Customers", "Employees", "Sales", "ManagerOrders", "Roles"
+			};
 		}
 
-		private async Task LoadAllDataAsync()
+		private void TableSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			try
-			{
-				CarsCollection = new ObservableCollection<Cars>(await DBHelper.Instance.GetAllCarsDBAsync());
-				CustomersCollection = new ObservableCollection<Customers>(await DBHelper.Instance.GetAllCustomersAsync());
-				SalesCollection = new ObservableCollection<Sales>(await DBHelper.Instance.GetAllSalesAsync());
-				EmployeesCollection = new ObservableCollection<Employees>(await DBHelper.Instance.GetAllEmployeesAsync());
-				RolesCollection = new ObservableCollection<Roles>(await DBHelper.Instance.GetAllRolesAsync());
+			_currentTable = TableSelector.SelectedItem?.ToString();
+			LoadData();
+		}
 
-				CarsDataGrid.ItemsSource = CarsCollection;
-				CustomersDataGrid.ItemsSource = CustomersCollection;
-				SalesDataGrid.ItemsSource = SalesCollection;
-				EmployeesDataGrid.ItemsSource = EmployeesCollection;
-				RolesDataGrid.ItemsSource = RolesCollection;
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show($"Ошибка загрузки данных: {ex.Message}");
-			}
-		}
-		private async void DataGrid_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
+		private void LoadData()
 		{
-			if (e.EditAction == DataGridEditAction.Commit)
+			switch (_currentTable)
 			{
-				try
-				{
-					await DBHelper.Instance.SaveChangesAsync();
-					MessageBox.Show("Изменения успешно сохранены!", "Сохранение", MessageBoxButton.OK, MessageBoxImage.Information);
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show($"Ошибка при сохранении: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-				}
+				case "Cars":
+					_context.Cars.Load();
+					DataGridView.ItemsSource = _context.Cars.Local;
+					break;
+				case "Customers":
+					_context.Customers.Load();
+					DataGridView.ItemsSource = _context.Customers.Local;
+					break;
+				case "Employees":
+					_context.Employees.Load();
+					DataGridView.ItemsSource = _context.Employees.Local;
+					break;
+				case "Sales":
+					_context.Sales.Load();
+					DataGridView.ItemsSource = _context.Sales.Local;
+					break;
+				case "ManagerOrders":
+					_context.ManagerOrders.Load();
+					DataGridView.ItemsSource = _context.ManagerOrders.Local;
+					break;
+				case "Roles":
+					_context.Roles.Load();
+					DataGridView.ItemsSource = _context.Roles.Local;
+					break;
+				default:
+					DataGridView.ItemsSource = null;
+					break;
 			}
 		}
-		private async void DataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
-		{
-			try
-			{
-				await DBHelper.Instance.SaveChangesAsync();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show($"Ошибка при сохранении изменений: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-			}
-		}
-		private async void SaveChanges_Click(object sender, RoutedEventArgs e)
+
+		private void Save_Click(object sender, RoutedEventArgs e)
 		{
 			try
 			{
-				await DBHelper.Instance.SaveChangesAsync();
-				MessageBox.Show("Изменения успешно сохранены!", "Сохранение", MessageBoxButton.OK, MessageBoxImage.Information);
+				_context.SaveChanges();
+				MessageBox.Show("Изменения успешно сохранены.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show($"Ошибка сохранения изменений: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+				MessageBox.Show("Ошибка при сохранении: " + ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
 			}
+		}
+
+		private void Refresh_Click(object sender, RoutedEventArgs e)
+		{
+			// Обновляем контекст — создаём новый
+			_context.Dispose();
+			_context = new McLaren_StoreEntities3();
+			LoadData();
 		}
 	}
 }

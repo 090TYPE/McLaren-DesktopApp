@@ -265,17 +265,12 @@ namespace McLaren_Store.Assets
 		{
 			return await _context.Cars.ToListAsync();
 		}
-
-		public async Task SaveChangesAsync()
+		public async Task<List<ManagerOrders>> GetAllManagerOrdersDBAsync()
 		{
-			// Обновите состояние изменённых и добавленных объектов
-			foreach (var entry in _context.ChangeTracker.Entries().Where(e => e.State == EntityState.Added || e.State == EntityState.Modified))
-			{
-				_context.Entry(entry.Entity).State = entry.State;
-			}
-
-			await _context.SaveChangesAsync();
+			return await _context.ManagerOrders.ToListAsync();
 		}
+
+		public async Task SaveChangesAsync() { await _context.SaveChangesAsync(); }
 		public async Task<List<SalesViewModel>> GetAllSalesDataAsync()
 		{
 			return await _context.Sales
@@ -372,6 +367,22 @@ namespace McLaren_Store.Assets
 		{
 			return await _context.Cars.FirstOrDefaultAsync(c => c.CarID == carId);
 		}
+		public async Task AddItemAsync<T>(T item) where T : class
+		{
+			_context.Set<T>().Add(item);
+			await _context.SaveChangesAsync();
+		}
 
+		public async Task RemoveItemAsync<T>(T item) where T : class
+		{
+			_context.Set<T>().Remove(item);
+			await _context.SaveChangesAsync();
+		}
+
+		// Получаем контекст (если все же нужно)
+		public McLaren_StoreEntities3 GetContext()
+		{
+			return _context;
+		}
 	}
 }
